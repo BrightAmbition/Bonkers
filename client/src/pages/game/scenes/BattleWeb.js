@@ -33,7 +33,7 @@ import hp from "../assets/sprites/hp.png";
 import go from "../assets/sprites/go.png"
 import mana from "../assets/sprites/mana.png"
 
-import pin from "../assets/sprites/pin.png";
+import pin from "../assets/sprites/Pin.png";
 
 import boss from "../assets/sprites/boss.png";
 

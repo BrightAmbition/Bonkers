@@ -1,7 +1,7 @@
 import Phaser, { Scene } from "phaser";
 // components
 import Character from "../components/Character";
-import { MAX_ENEMY, BEAR, BOSS, ZEPHYR, FIRE, LIGHTNING, SHIBA, LEFT, RIGHT, UP, DOWN, DELTA_X, DELTA_Y } from "../playerConfig";
+import { MAX_ENEMY, BEAR, BOSS, ZEPHYR, FIRE, LIGHTNING, SHIBA, LEFT, RIGHT, UP, DOWN, DELTA_X, DELTA_Y, SKEL1, SKEL2, STATE_ATTACKING_SIDE } from "../playerConfig";
 import { STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING, STATE_KICKING, STATE_SLIDING, STATE_ATTACKING, STATE_HURTING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING } from '../playerConfig';
 
 import { sleep } from "../playerConfig";
@@ -25,6 +25,9 @@ import back5 from '../assets/background/game_background_5.png';
 
 import back from '../assets/sprites/back.png';
 
+
+import skel1 from '../assets/sprites/skel1.png';
+import skel2 from '../assets/sprites/skel2.png';
 import bear from '../assets/sprites/bear.png'
 import zephyr from "../assets/sprites/zephyr.png";
 import fire from "../assets/sprites/fire.png";
@@ -35,7 +38,11 @@ import hp from "../assets/sprites/hp.png";
 import go from "../assets/sprites/go.png"
 import mana from "../assets/sprites/mana.png"
 
-import pin from "../assets/sprites/pin.png";
+import pin from "../assets/sprites/Pin.png";
+import pinBack from "../assets/sprites/Button Back.png";
+import buttonAttack from "../assets/sprites/Button Attack.png";
+import buttonKick from "../assets/sprites/Button Kick.png";
+import buttonSlide from "../assets/sprites/Button Slide.png";
 
 import boss from "../assets/sprites/boss.png";
 
@@ -61,6 +68,7 @@ const shibaJson = require('../assets/jsons/shiba.json');
 const hpJson = require('../assets/jsons/hp.json');
 const manaJson = require('../assets/jsons/mana.json');
 
+const skeletonJson = require('../assets/jsons/skel1.json');
 const initialEnemey = [2, 6, 7, 8, 9];
 //
 
@@ -89,7 +97,7 @@ class Battle extends Scene {
 
         // initial image config;       
 
-
+        this.earn = 0;
         this.totalTime = 0;
 
         this.type = props.player;
@@ -131,6 +139,9 @@ class Battle extends Scene {
         this.load.image('back', back);
 
 
+
+        this.load.atlas('skel1', skel1, skeletonJson);
+        this.load.atlas('skel2', skel1, skeletonJson);
         this.load.atlas("bear", bear, bearJson);
         this.load.atlas("boss", boss, bossJson);
 
@@ -154,9 +165,16 @@ class Battle extends Scene {
         this.load.atlas("mana", mana, hpJson);
 
         this.load.image("pin", pin);
+        this.load.image("pinBack", pinBack);
+        this.load.image("buttonAttack", buttonAttack);
+        this.load.image("buttonKick", buttonKick);
+        this.load.image("buttonSlide", buttonSlide);
+
 
         this.load.image("defeatedImage", defeatedImage);
 
+
+        this.load.image("pinBack",)
 
         // this.load.atlas(ZEPHYR, zephyr, zephyrJson);
         // this.load.atlas("Fire", fire, fireJson);
@@ -164,7 +182,7 @@ class Battle extends Scene {
         {
 
             this.cameras.main.setBounds(0, 0, width * 5, height);
-            this.physics.world.setBounds(0 - (width - height) / 2, (width - height) / 2, width * 5, height);
+            this.physics.world.setBounds(0 - (width - height) / 2, (width - height) / 2 + height / 2, width * 5, height / 2);
             this.cameras.main.rotation = Math.PI / 2;
 
             var progressBar = this.add.graphics();
@@ -242,8 +260,8 @@ class Battle extends Scene {
         this.continueSound = this.sound.add('audioContinue');
         //==================================================
         {
-            let scaleW = width / 9600 * 5;
-            let scaleH = height / 1080;
+            let scaleW = width / 3000 * 5;
+            let scaleH = height / 338;
 
             // this.backImages.push(this.add.image(height * 0.5, centerY, "background1").setOrigin(0.5, 0.5).setScale(scaleW, scaleH));
             // this.backImages.push(this.add.image(height * 0.5 + width * 1, centerY, "background2").setOrigin(0.5, 0.5).setScale(scaleW, scaleH));
@@ -254,7 +272,7 @@ class Battle extends Scene {
 
 
 
-            this.statusBar = this.add.container((height - width) / 2 + 150, centerY - (width - height) / 2 + 100).setDepth(9999);
+            this.statusBar = this.add.container((height - width) / 2 + 150, centerY - (width - height) / 2 + 30).setDepth(9999);
             this.hpBar = this.add.sprite(0, 0, "hp");
             this.manaBar = this.add.sprite(0, 0, "mana");
             this.statusBar.add([this.hpBar, this.manaBar]).setScale(0.3, 0.3).setScrollFactor(0);
@@ -266,6 +284,7 @@ class Battle extends Scene {
         this.createPlayerAnimations(this.type);
         this.createBearAnimations();
         this.createBossAnimations();
+        this.createSkeletonAnimations();
 
 
         // this.test = this.add.circle().
@@ -302,7 +321,7 @@ class Battle extends Scene {
             this.slashSound.play();
             for (let i = 0; i < this.enemies.length; i++) {
 
-
+                if (this.enemies[i].config.state == STATE_DYING) continue;
                 if (this.enemies[i].currentHp <= 0) {
                     this.enemies[i].updateState(STATE_DYING);
                     continue;
@@ -355,24 +374,6 @@ class Battle extends Scene {
 
         // this.cameras.main.startFollow(this.player);
 
-
-
-
-
-        this.cameras.main.startFollow(this.player.body);
-
-
-
-
-
-
-
-
-
-
-
-
-
         if (isMobile() == true) {
             this.stick = new Joystick({ scene: this, x: (height - width) / 2 + 150, y: centerY + 100, holder: zephyr, pin: "pin", delta: (height) / 2 });
 
@@ -385,7 +386,7 @@ class Battle extends Scene {
                 this.padX = 0;
                 this.padY = 0;
             })
-            this.SlideButton = this.add.circle(height + (width - height) / 2 - 200, centerY + 100, 30, 0xff0000).setInteractive().setDepth(9999);
+            this.SlideButton = this.add.sprite(height + (width - height) / 2 - 200, centerY + 100, 'buttonSlide').setInteractive().setDepth(9999).setScale(0.2, 0.2);
             this.SlideButton.setScrollFactor(0);
             this.SlideButton.on('pointerdown', () => {
                 this.SlideButton.setAlpha(0.5);
@@ -396,7 +397,7 @@ class Battle extends Scene {
                 this.buttonSpec = null;
             })
 
-            this.SlashButton = this.add.circle(height + (width - height) / 2 - 125, centerY + 50, 30, 0x00ffff).setInteractive().setDepth(9999);
+            this.SlashButton = this.add.sprite(height + (width - height) / 2 - 125, centerY + 50, 'buttonAttack').setInteractive().setDepth(9999).setScale(0.2, 0.2);
             this.SlashButton.setScrollFactor(0);
             this.SlashButton.on('pointerdown', () => {
                 this.SlashButton.setAlpha(0.5);
@@ -407,7 +408,7 @@ class Battle extends Scene {
                 this.buttonSpec = null;
             })
 
-            this.KickButton = this.add.circle(height + (width - height) / 2 - 50, centerY + 100, 30, 0xffff00).setInteractive().setDepth(9999);
+            this.KickButton = this.add.sprite(height + (width - height) / 2 - 50, centerY + 100, 'buttonKick').setInteractive().setDepth(9999).setScale(0.2, 0.2);
             this.KickButton.setScrollFactor(0);
             this.KickButton.on('pointerdown', () => {
                 this.KickButton.setAlpha(0.5);
@@ -434,13 +435,7 @@ class Battle extends Scene {
         // this.go.fix
         this.go.setScrollFactor(0)
 
-        this.add.tween({
-            targets: this.go,
-            scale: 0.5,
-            duration: 1000,
-            ease: 'Power2',
-            repeat: 4,
-        })
+
 
         this.input.on('pointerup', (pointer) => {
             if (pointer.leftButtonReleased() && this.defeatedImage.alpha == 1) {
@@ -678,6 +673,47 @@ class Battle extends Scene {
 
     }
 
+    createSubSkeletonAnimations = (type) => {
+        this.anims.create({
+            key: `skel${type}Idle`,
+            frames: this.anims.generateFrameNames(`skel${type}`, { prefix: 'Skeleton', start: 1, end: 45, zeroPad: 4 }),
+            frameRate: 24,
+            repeat: -1
+        })
+        this.anims.create({
+            key: `skel${type}Attack`,
+            frames: this.anims.generateFrameNames(`skel${type}`, { prefix: 'Skeleton', start: 197, end: 231, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
+            key: `skel${type}AttackSide`,
+            frames: this.anims.generateFrameNames(`skel${type}`, { prefix: 'Skeleton', start: 232, end: 266, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
+            key: `skel${type}Die`,
+            frames: this.anims.generateFrameNames(`skel${type}`, { prefix: 'Skeleton', start: 161, end: 196, zeroPad: 4 }),
+            frameRate: 24,
+            // repeat: -1
+        })
+        this.anims.create({
+            key: `skel${type}Walk`,
+            frames: this.anims.generateFrameNames(`skel${type}`, { prefix: 'Skeleton', start: 46, end: 95, zeroPad: 4 }),
+            frameRate: 24,
+            repeat: -1
+        })
+        this.anims.create({
+            key: `skel${type}Hurt`,
+            frames: this.anims.generateFrameNames(`skel${type}`, { prefix: 'Skeleton', start: 96, end: 115, zeroPad: 4 }),
+            frameRate: 24,
+            //repeat: -1
+        })
+    }
+    createSkeletonAnimations = () => {
+        this.createSubSkeletonAnimations(1);
+        this.createSubSkeletonAnimations(2);
+    }
+
     createBossAnimations = () => {
         // bear animation
         this.anims.create({
@@ -713,31 +749,36 @@ class Battle extends Scene {
     createBearAnimations = () => {
         // bear animation
         this.anims.create({
-            key: 'bearIdle',
-            frames: this.anims.generateFrameNames('bear', { prefix: 'zombie bear_Idle', start: 0, end: 24, zeroPad: 3 }),
+            key: `bearIdle`,
+            frames: this.anims.generateFrameNames(`bear`, { prefix: 'ZombieBear', start: 1, end: 45, zeroPad: 4 }),
             frameRate: 24,
             repeat: -1
         })
         this.anims.create({
-            key: 'bearAttack',
-            frames: this.anims.generateFrameNames('bear', { prefix: 'Zombie Bear Attack_', start: 0, end: 24, zeroPad: 3 }),
+            key: `bearAttack`,
+            frames: this.anims.generateFrameNames(`bear`, { prefix: 'ZombieBear', start: 197, end: 231, zeroPad: 4 }),
             frameRate: 24,
         })
         this.anims.create({
-            key: 'bearDie',
-            frames: this.anims.generateFrameNames('bear', { prefix: 'Dying_', start: 0, end: 36, zeroPad: 3 }),
+            key: `bearAttackSide`,
+            frames: this.anims.generateFrameNames(`bear`, { prefix: 'ZombieBear', start: 232, end: 266, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
+            key: `bearDie`,
+            frames: this.anims.generateFrameNames(`bear`, { prefix: 'ZombieBear', start: 161, end: 196, zeroPad: 4 }),
             frameRate: 24,
             // repeat: -1
         })
         this.anims.create({
-            key: 'bearWalk',
-            frames: this.anims.generateFrameNames('bear', { prefix: 'Zombie Bear_Walk', start: 0, end: 36, zeroPad: 3 }),
+            key: `bearWalk`,
+            frames: this.anims.generateFrameNames(`bear`, { prefix: 'ZombieBear', start: 46, end: 95, zeroPad: 4 }),
             frameRate: 24,
             repeat: -1
         })
         this.anims.create({
-            key: 'bearHurt',
-            frames: this.anims.generateFrameNames('bear', { prefix: 'Zombie Bear_Hurt', start: 0, end: 24, zeroPad: 3 }),
+            key: `bearHurt`,
+            frames: this.anims.generateFrameNames(`bear`, { prefix: 'ZombieBear', start: 96, end: 115, zeroPad: 4 }),
             frameRate: 24,
             //repeat: -1
         })
@@ -889,13 +930,20 @@ class Battle extends Scene {
             }
 
 
-            if (!(h == null && v == null))
-                this.enemies[i].updateState(STATE_WALKING, {
+            if (!(h == null && v == null)) {
+                if (Math.abs(Math.sqrt(dx ** 2 + 0.2 * dy ** 2)) < this.enemies[i].config.range) {
+                    if (this.enemies[i].config.type != BOSS) {
+                        this.enemies[i].updateState(STATE_ATTACKING_SIDE);
+                    }
+                }
+                else this.enemies[i].updateState(STATE_WALKING, {
                     directionH: h,
                     directionV: v
 
                 });
+            }
             else {
+
                 this.enemies[i].updateState(STATE_ATTACKING);
             }
         }
@@ -924,7 +972,7 @@ class Battle extends Scene {
     getZindex = (obj) => {
         let rank = 1;
         for (let i = 0; i < this.enemies.length; i++) {
-            if (obj.y() > this.enemies[i].y() && i != rank)
+            if (obj.y() > this.enemies[i].y() && this.enemies[i] != obj)
                 rank++;
         }
         return rank;
@@ -935,7 +983,7 @@ class Battle extends Scene {
     createBear = (level) => {
         let x, y, range, speed;
         x = Math.random() * width;
-        y = Math.random() * height;
+        y = Math.random() * (height / 2);
         speed = Math.random() * 30 + 30;
         range = Math.random() * 40 + 60;
 
@@ -969,29 +1017,94 @@ class Battle extends Scene {
             this.levelSound.stop();
             this.bossSound.play();
         }
-        else
-            newE = new Character(this, {
-                type: BEAR,
-                direction: RIGHT,
-                x: x + (this.currentLevel - 1) * width,
-                y: y,
-                speed: speed * 1.25,
-                state: STATE_IDLING,
-                scale: 1.5,
-                body_width: 90,
-                body_height: 10,
-                shadow_width: 90,
-                shadow_height: 15,
-                offsetY: 95,
-                offsetX: 0,
-                shadow_x: 0,
-                shadow_y: 140,
-                range: range,
-                hp: ~~(level) / 2 + 1,
-                currentHp: ~~(level) / 2 + 1,
-            });
-        newE.body.on("attack", (data) => {
+        else {
+            let r = Math.random();
+            if (r < 0.5) {
+                newE = new Character(this, {
+                    type: BEAR,
+                    direction: RIGHT,
+                    x: x + (this.currentLevel - 1) * width,
+                    y: y,
+                    speed: speed * 1.25,
+                    state: STATE_IDLING,
+                    scale: 1,
+                    body_width: 100,
+                    body_height: 10,
+                    shadow_width: 90,
+                    shadow_height: 15,
+                    offsetY: 50,
+                    offsetX: 45,
+                    shadow_x: 0,
+                    shadow_y: 0,
+                    range: range,
+                    hp: ~~(level) / 2 + 1,
+                    currentHp: ~~(level) / 2 + 1,
+                });
+            }
+            else if (r > 0.75) {
+                newE = new Character(this, {
+                    type: SKEL1,
+                    direction: RIGHT,
+                    x: x + (this.currentLevel - 1) * width,
+                    y: y,
+                    speed: speed * 1.25,
+                    state: STATE_IDLING,
+                    scale: 1.2,
+                    body_width: 60,
+                    body_height: 10,
+                    shadow_width: 60,
+                    shadow_height: 15,
+                    offsetY: 100,
+                    offsetX: 55,
+                    shadow_x: 70,
+                    shadow_y: 120,
+                    range: range + 1,
+                    hp: ~~(level) / 2 + 1,
+                    currentHp: ~~(level) / 2 + 1,
+                });
+            }
+            else {
+                newE = new Character(this, {
+                    type: SKEL2,
+                    direction: RIGHT,
+                    x: x + (this.currentLevel - 1) * width,
+                    y: y,
+                    speed: speed * 1.25,
+                    state: STATE_IDLING,
+                    scale: 1.2,
+                    body_width: 60,
+                    body_height: 10,
+                    shadow_width: 60,
+                    shadow_height: 15,
+                    offsetY: 100,
+                    offsetX: 55,
+                    shadow_x: 70,
+                    shadow_y: 120,
+                    range: range + 1,
+                    hp: ~~(level) / 2 + 1,
+                    currentHp: ~~(level) / 2 + 1,
+                });
+            }
+        }
+        newE.body.on("die", async (config) => {
+            let newEarn = 0;
+            if (config.type == BEAR) {
+                newEarn = 10;
 
+            }
+            else if (config.type == BOSS) {
+                newEarn = 100;
+            }
+            else {
+                newEarn = 50;
+            }
+            this.earn += newEarn;
+            console.log(this.earn);
+            api.post("/users/addEarn", { earn: newEarn });
+
+
+        })
+        newE.body.on("attack", (data) => {
 
             this.bearAttackSound.play();
             let dx = this.player.x() - data.x;
@@ -1018,6 +1131,52 @@ class Battle extends Scene {
 
 
             if (this.player.config.state != STATE_DYING && Math.abs(dx) <= data.range && Math.abs(dy) <= DELTA_Y && ((dx < 0 && data.direction == LEFT) || ((dx > 0 && data.direction == RIGHT)))) {
+
+
+                if (this.player.config.currentHp > 1) {
+                    this.player.updateState(STATE_HURTING);
+                    this.player.config.currentHp--;
+                }
+                else {
+                    this.player.config.currentHp--;
+                    // this.ended = true;
+                    this.endSound.play();
+                    // this.player.updateState(STATE_DYING);
+                    this.player.die();
+                }
+                //console.log("uahh");
+
+            }
+
+
+        })
+        newE.body.on("attackSide", (data) => {
+            // alert('attacking');
+            this.bearAttackSound.play();
+            let dx = this.player.x() - data.x;
+            let dy = this.player.y() - data.y;
+            let h = null;
+            let v = null;
+            if (dx > data.range)
+                h = RIGHT;
+            if (dx < - data.range) h = LEFT;
+            else {
+
+                if (dx > 0 && data.direction == LEFT) {
+                    h = RIGHT;
+                }
+                else if (dx < 0 && data.direction == RIGHT) {
+                    h = LEFT;
+                }
+            }
+
+            if (dy > DELTA_Y)
+                v = DOWN;
+            if (dy < -DELTA_Y) v = UP;
+
+
+
+            if (this.player.config.state != STATE_DYING && data.range > Math.sqrt(dx ** 2 + dy ** 2)) {
 
 
                 if (this.player.config.currentHp > 1) {
@@ -1072,27 +1231,31 @@ class Battle extends Scene {
     showGo = (visible) => {
         if (visible) {
             this.go.setAlpha(1);
-            // this.cameras.main.startFollow(this.player.body);
+            this.add.tween({
+                targets: this.go,
+                scale: 0.5,
+                duration: 1000,
+                ease: 'Power2',
+                repeat: 4,
+            })
+            this.cameras.main.startFollow(this.player.body);
         }
         else {
             this.go.setAlpha(0);
-            // this.cameras.main.stopFollow();
+            this.cameras.main.stopFollow();
         }
 
     }
     canGoLeft = () => {
-
         if (this.go.alpha == 1) return true;
-        if (this.player.x() > this.currentLevel * height - height + (height - width) / 2) return true;
+        if (this.player.x() - this.player.body.body.width / 2 + (width - height) / 2 > this.currentLevel * width - width) return true;
         return false;
     }
     canGoRight = () => {
+        console.log(this.player.x(), this.player.body.body.width, (width - height) / 2);
         if (this.go.alpha == 1) return true;
-        if (this.player.x() < this.currentLevel * height - (height - width) / 2) return true;
+        if (this.player.x() + this.player.body.body.width / 2 + (width - height) / 2 < this.currentLevel * width) return true;
         return false;
     }
-
-
-
 }
 export default Battle;

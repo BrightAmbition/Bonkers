@@ -1,18 +1,22 @@
-import {Scene} from "phaser";
+import { Scene } from "phaser";
 // import logo from '../assets/load/8.png';
+
+var height = window.innerWidth
+var width = window.innerHeight
+
 class Loading extends Scene {
-    constructor(props){
-        super(props);                
+    constructor(props) {
+        super(props);
     }
-    preload(){
-        
+    preload() {
+
     }
-    create(){
-        
+    create() {
+
     }
-    update(){
+    update() {
         this.scene.start('battle');
     }
-    
+
 }
 export default Loading;

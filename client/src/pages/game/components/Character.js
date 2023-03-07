@@ -1,7 +1,7 @@
 import Phaser from "phaser";
-import { BOSS, ZEPHYR, FIRE, STATE_SLIDING, BEAR } from "../playerConfig";
+import { BOSS, ZEPHYR, FIRE, STATE_SLIDING, BEAR, PLAYER, SKEL1, SKEL2 } from "../playerConfig";
 import { } from "../playerConfig";
-import { STATE_ATTACKING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING, STATE_HURTING, STATE_KICKING, STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING } from '../playerConfig';
+import { STATE_ATTACKING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING, STATE_HURTING, STATE_KICKING, STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING, STATE_ATTACKING_SIDE } from '../playerConfig';
 import { LEFT, RIGHT, UP, DOWN } from '../playerConfig';
 
 
@@ -17,12 +17,20 @@ class Character {
 
 
         this.shadow = this.scene.add.ellipse(config.x + config.shadow_x, config.y + config.shadow_y, config.shadow_width, config.shadow_height, "#000000", 0.7).setOrigin(0, 0).setScale(config.scale, config.scale);
+
         this.body = this.scene.physics.add.sprite(config.x, config.y, config.type, 0).setScale(config.scale, config.scale).setOrigin(0, 0);
+
+        // if (this.config.type == SKEL1 || this.config.type == SKEL2)
+        //     this.body.setOrigin(0.5, 0.5);
         this.body.setCollideWorldBounds(true);
 
 
+
+
+        this.body.setBodySize(config.body_width, config.body_height, false);
         this.body.setBodySize(config.body_width, config.body_height, false);
         this.body.body.setOffset(config.offsetX, config.offsetY);
+
 
         this.attacking = false;
 
@@ -43,8 +51,12 @@ class Character {
             }
             else if (key == this.config.type + "Die") {
                 this.dead = true;
-                this.body.destroy();
-                this.shadow.destroy();
+                this.body.emit("die", { ...this.config });
+                if (this.config.type != PLAYER) {
+                    this.body.destroy();
+                    this.shadow.destroy();
+                }
+
             }
             else {
                 this.setState(STATE_WAITING);
@@ -132,23 +144,6 @@ class Character {
 
     die = () => {
         this.body.play(this.config.type + "Die")
-        if (this.config.type == BOSS) {
-            if (this.direction() == this.config.direction) {
-                this.body.setOrigin(0.3, 0.1);
-            }
-            else {
-                this.body.setOrigin(0, 0.1);
-            }
-        }
-        if (this.config.type == BEAR) {
-            if (this.direction() == this.config.direction) {
-                // alert("UAAAAA");
-                this.body.setOrigin(0.5, 0.2);
-            }
-            else {
-                this.body.setOrigin(0, 0.2);
-            }
-        }
 
         this.setState(STATE_DYING);
     }
@@ -210,10 +205,26 @@ class Character {
         // this.setAttackFlag(14, 18);
         this.emitAttack(14);
         this.setState(STATE_ATTACKING);
+    }
 
+    attackSide = () => {
+        //13~18
+        this.body.play(this.config.type + "AttackSide");
+        this.setVelocity(0, 0);
+        // this.setAttackFlag(14, 18);
+        this.emitAttackSide(14);
+        this.setState(STATE_ATTACKING);
+    }
 
-
-
+    emitAttackSide = (st) => {
+        setTimeout(() => {
+            this.body.emit("attackSide", {
+                x: this.x(),
+                y: this.y(),
+                range: this.config.range,
+                direction: this.direction(),
+            });
+        }, st * 1000 / 24)
     }
 
     emitAttack = (st) => {
@@ -225,7 +236,6 @@ class Character {
                 direction: this.direction(),
             });
         }, st * 1000 / 24)
-
     }
 
 
@@ -282,6 +292,10 @@ class Character {
                 if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_WALKING)
                     this.attack();
                 break;
+            case STATE_ATTACKING_SIDE:
+                if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_WALKING)
+                    this.attackSide();
+                break;
 
         }
         this.shadow.setPosition(this.body.x + this.config.shadow_x, this.body.y + this.config.shadow_y);
@@ -301,7 +315,6 @@ class Character {
         return this.body.body.y + this.body.body.height / 2;
     }
     direction = () => {
-
         if (this.body.flipX == false) return this.config.direction;
         else {
             if (this.config.direction == LEFT) return RIGHT;

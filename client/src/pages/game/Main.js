@@ -31,7 +31,7 @@ const Main = (props) => {
       physics: {
         default: "arcade",
         arcade: {
-          // debug: true,
+          debug: true,
           gravityY: 0
 
         },

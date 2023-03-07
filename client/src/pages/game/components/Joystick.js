@@ -14,16 +14,16 @@ export default class Joystick extends Phaser.GameObjects.Sprite {
         /* Pin indicator - what players think they drag */
         this.centerX = x;
         this.centerY = y;
-        scene.add.circle(x, y, 100, 0x00ff00).setAlpha(0.3).setDepth(9999).setScrollFactor(0);
-        this.pin = scene.physics.add.sprite(x, y, pin, 0).setOrigin(0.5, 0.5).setDepth(9999);
+        scene.physics.add.sprite(x, y, "pinBack", 0).setOrigin(0.5, 0.5).setDepth(9999).setScale(0.3, 0.3).setScrollFactor(0);
+        this.pin = scene.physics.add.sprite(x, y, pin, 0).setOrigin(0.5, 0.5).setDepth(9999).setScale(0.4, 0.4);
         this.pin.setScrollFactor(0);
         this.pin.setInteractive(new Phaser.Geom.Circle(this.pin.width / 2, this.pin.height / 2, this.pin.width / 2 - 10), Phaser.Geom.Circle.Contains);
 
         scene.input.setDraggable(this.pin);
         this.pin.on('pointerdown', () => {
 
-            this.pin.setTint(0x44ff44);
-            this.pin.setScale(1.2, 1.2);
+            // this.pin.setTint(0x44ff44);
+            this.pin.setScale(0.6, 0.6);
             this.prevX = this.scene.cameras.main.midPoint.x;
         });
 
@@ -32,7 +32,7 @@ export default class Joystick extends Phaser.GameObjects.Sprite {
         this.pin.on('pointerup', () => {
 
             this.pin.clearTint();
-            this.pin.setScale(1, 1);
+            this.pin.setScale(0.4, 0.4);
             this.pin.setPosition(this.centerX, this.centerY);
             this.emit('dragStopped');
         });
@@ -40,7 +40,7 @@ export default class Joystick extends Phaser.GameObjects.Sprite {
         this.pin.on('pointerout', () => {
 
             this.pin.clearTint();
-            this.pin.setScale(1, 1);
+            this.pin.setScale(0.4, 0.4);
             this.pin.setPosition(this.centerX, this.centerY);
             this.emit('dragStopped');
         });

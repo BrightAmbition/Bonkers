@@ -1,12 +1,16 @@
 export const BEAR = "bear";
 export const PLAYER = "player";
 export const BOSS = "boss";
+export const SKEL1 = "skel1";
+export const SKEL2 = "skel2";
 
 export const ZEPHYR = "Zephyr";
 export const FIRE = "Fire";
 export const LIGHTNING = "Lightning"
 export const SHIBA = "Shiba"
 
+
+export const STATE_ATTACKING_SIDE = "attacking side";
 export const STATE_WAITING = "waiting for states";
 export const STATE_WALKING = "walking";
 export const STATE_IDLING = "idling";
@@ -20,7 +24,7 @@ export const STATE_SLASHING_RUNNING = "slashing running";
 export const STATE_SLASHING_AIR = "slashing air";
 export const STATE_SLIDING = "sliding";
 export const STATE_DEAD = "dead";
-export const STATE_HURTING = "hurting"
+export const STATE_HURTING = "hurting";
 
 //enemies
 export const STATE_ATTACKING = "attacking";
@@ -50,7 +54,6 @@ export const DELTA_Y = 2;
 //     "SlashInAir":"_Shiba_Dying_",
 //     "Die":"_Shiba_Dying_",
 //     "Die":"_Shiba_Dying_",
-
 // }
 
 export function sleep(ms) {

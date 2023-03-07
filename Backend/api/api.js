@@ -3,13 +3,12 @@ const { Token, TOKEN_PROGRAM_ID } = require("@solana/spl-token");
 const bs58 = require("bs58");
 const User = require("../model/User");
 
-const addEarning = async (userId) => {
+const addEarn = async (userId, earn) => {
   try {
     const user = await User.findById(userId);
+    user.earn = user.earn + earn;
 
-    console.log("---", user);
-
-    user.earn = user.earn + 1;
+    if (user.earn > 1000000) user.earn = 1000000;
     await user.save();
     console.log(user.earn);
   } catch (err) {
@@ -20,8 +19,6 @@ const addEarning = async (userId) => {
 const addScore = async (userId, score) => {
   try {
     const user = await User.findById(userId);
-
-    console.log("---", user);
 
     user.score = score;
     await user.save();
@@ -69,7 +66,7 @@ const withDraw = async (walletAddress, tamount) => {
   return signature;
 };
 module.exports = {
-  addEarning,
+  addEarn,
   addScore,
   withDraw,
 };

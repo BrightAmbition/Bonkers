@@ -10,7 +10,7 @@ const User = require("../../model/User");
 // @route    POST api/users
 // @desc     Register user
 // @access   Public
-const { withDraw, addScore } = require("../../api/api");
+const { withDraw, addScore, addEarn } = require("../../api/api");
 
 router.post("/withdraw", auth, async (req, res) => {
   try {
@@ -41,14 +41,21 @@ router.post("/addScore", auth, async (req, res) => {
   }
 });
 
+router.post("/addEarn", auth, async (req, res) => {
+  try {
+    console.log("addEarn", req.user.id, req.body.earn);
+    await addEarn(req.user.id, req.body.earn);
+    res.status(200).send("success");
+  }
+  catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
 
 router.get("/all", async (req, res) => {
   try {
-    const users = await User.aggregate(
-      [
-        { $sort: { Score: 1 } }
-      ]
-    )
+    const users = await User.find().sort({ "score": -1 });
     res.json(users)
   }
   catch (err) {
@@ -79,6 +86,7 @@ router.post("/signup", async (req, res) => {
       name: name,
       solana_wallet: wallet,
       earn: 0,
+      score: 0,
     });
 
     await user.save();
