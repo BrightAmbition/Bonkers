@@ -14,8 +14,11 @@ const Scoreboard = ({ auth }) => {
         fetchScoreData();
     }, [])
 
-    if (auth.isAuthenticated != true) {
+    if (auth.isAuthenticated == false) {
         return <Navigate to="/signup" />
+    }
+    else if (auth.isAuthenticated == undefined) {
+        return <>Loading</>
     }
     return (<>
 
@@ -37,7 +40,8 @@ const Scoreboard = ({ auth }) => {
                         </thead>
                         <tbody className="text-[22px] text-[#128921] sm:text-[36px] md:text-[40px] lg:text-[48px]">
                             {
-                                users.map((user, index) => {
+                                users.slice(0, users.length > 20 ? 20 : users.length).map((user, index) => {
+
                                     return <tr key={index} className={index == 0 ? "text-[#dfff00]" : ""}
                                     >
                                         <td>{index + 1}</td>

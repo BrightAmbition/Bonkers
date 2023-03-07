@@ -37,20 +37,19 @@ function App() {
     window.addEventListener("storage", () => {
       if (!localStorage.token) store.dispatch({ type: LOGOUT });
     });
-  }, []);
+  });
   return (
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Layout />}>
-            <Route exact index element={<Sign />} />
+            {/* <Route exact index element={<Sign />} /> */}
             <Route exact path="signup" element={<Sign />} />
             <Route exact path="scoreboard" element={<Scoreboard />} />
             <Route exact path="selectcharacter" element={<CharacterSelection />} />
             <Route exact path="withdraw" element={<Withdraw />} />
           </Route>
           <Route exact path="game" element={<Main />} />
-
         </Routes>
       </BrowserRouter>
     </Provider>

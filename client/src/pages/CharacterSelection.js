@@ -12,8 +12,11 @@ const CharacterSelection = ({ auth }) => {
         if (elements != null) elements.remove();
     }, [])
 
-    if (auth.isAuthenticated != true) {
+    if (auth.isAuthenticated == false) {
         return <Navigate to="/signup" />
+    }
+    else if (auth.isAuthenticated == undefined) {
+        return <>Loading</>
     }
     return (<>
         <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 m-auto py-20">

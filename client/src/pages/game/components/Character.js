@@ -144,7 +144,7 @@ class Character {
 
     die = () => {
         this.body.play(this.config.type + "Die")
-
+        this.body.setVelocity(0);
         this.setState(STATE_DYING);
     }
 
@@ -218,23 +218,25 @@ class Character {
 
     emitAttackSide = (st) => {
         setTimeout(() => {
-            this.body.emit("attackSide", {
-                x: this.x(),
-                y: this.y(),
-                range: this.config.range,
-                direction: this.direction(),
-            });
+            if (this.config.state == STATE_ATTACKING || this.config.state == STATE_ATTACKING_SIDE || this.config.state == STATE_SLASHING_IDLE || this.config.state == STATE_SLASHING_RUNNING)
+                this.body.emit("attackSide", {
+                    x: this.x(),
+                    y: this.y(),
+                    range: this.config.range,
+                    direction: this.direction(),
+                });
         }, st * 1000 / 24)
     }
 
     emitAttack = (st) => {
         setTimeout(() => {
-            this.body.emit("attack", {
-                x: this.x(),
-                y: this.y(),
-                range: this.config.range,
-                direction: this.direction(),
-            });
+            if (this.config.state == STATE_ATTACKING || this.config.state == STATE_ATTACKING_SIDE || this.config.state == STATE_SLASHING_IDLE || this.config.state == STATE_SLASHING_RUNNING)
+                this.body.emit("attack", {
+                    x: this.x(),
+                    y: this.y(),
+                    range: this.config.range,
+                    direction: this.direction(),
+                });
         }, st * 1000 / 24)
     }
 

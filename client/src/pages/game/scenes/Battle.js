@@ -931,7 +931,7 @@ class Battle extends Scene {
 
 
             if (!(h == null && v == null)) {
-                if (Math.abs(Math.sqrt(dx ** 2 + 0.2 * dy ** 2)) < this.enemies[i].config.range) {
+                if (Math.abs(Math.sqrt(dx ** 2 + 0.5 * dy ** 2)) < this.enemies[i].config.range) {
                     if (this.enemies[i].config.type != BOSS) {
                         this.enemies[i].updateState(STATE_ATTACKING_SIDE);
                     }
@@ -1019,7 +1019,7 @@ class Battle extends Scene {
         }
         else {
             let r = Math.random();
-            if (r < 0.5) {
+            if (r < 0.3) {
                 newE = new Character(this, {
                     type: BEAR,
                     direction: RIGHT,
@@ -1028,20 +1028,21 @@ class Battle extends Scene {
                     speed: speed * 1.25,
                     state: STATE_IDLING,
                     scale: 1,
-                    body_width: 100,
+                    body_width: 120,
                     body_height: 10,
-                    shadow_width: 90,
+                    shadow_width: 120,
                     shadow_height: 15,
-                    offsetY: 50,
-                    offsetX: 45,
-                    shadow_x: 0,
-                    shadow_y: 0,
+                    offsetY: 170,
+                    offsetX: 90,
+                    shadow_x: 90,
+                    shadow_y: 170,
                     range: range,
                     hp: ~~(level) / 2 + 1,
                     currentHp: ~~(level) / 2 + 1,
                 });
             }
-            else if (r > 0.75) {
+            else if (r > 0.3) {
+
                 newE = new Character(this, {
                     type: SKEL1,
                     direction: RIGHT,
@@ -1049,21 +1050,22 @@ class Battle extends Scene {
                     y: y,
                     speed: speed * 1.25,
                     state: STATE_IDLING,
-                    scale: 1.2,
-                    body_width: 60,
+                    scale: 1,
+                    body_width: 120,
                     body_height: 10,
-                    shadow_width: 60,
+                    shadow_width: 120,
                     shadow_height: 15,
-                    offsetY: 100,
-                    offsetX: 55,
-                    shadow_x: 70,
-                    shadow_y: 120,
+                    offsetY: 170,
+                    offsetX: 90,
+                    shadow_x: 90,
+                    shadow_y: 170,
                     range: range + 1,
                     hp: ~~(level) / 2 + 1,
                     currentHp: ~~(level) / 2 + 1,
                 });
             }
             else {
+
                 newE = new Character(this, {
                     type: SKEL2,
                     direction: RIGHT,
@@ -1071,7 +1073,7 @@ class Battle extends Scene {
                     y: y,
                     speed: speed * 1.25,
                     state: STATE_IDLING,
-                    scale: 1.2,
+                    scale: 1,
                     body_width: 60,
                     body_height: 10,
                     shadow_width: 60,
@@ -1176,7 +1178,7 @@ class Battle extends Scene {
 
 
 
-            if (this.player.config.state != STATE_DYING && data.range > Math.sqrt(dx ** 2 + dy ** 2)) {
+            if (this.player.config.state != STATE_DYING && data.range > Math.sqrt(dx ** 2 + 0.5 * dy ** 2)) {
 
 
                 if (this.player.config.currentHp > 1) {
