@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import Loading from './scenes/Loading';
 import Battle from "./scenes/Battle";
+import BattleWeb from "./scenes/BattleWeb";
 
 import { Link } from "react-router-dom";
 import { isMobile } from "../../utils/utils";
@@ -17,7 +18,12 @@ const Main = (props) => {
   useEffect(() => {
     const loading = new Loading({ key: 'loading' });
     let player = location.state.player ? location.state.player : "Zephyr";
-    const battle = new Battle({ key: 'battle', player: player });
+    let battle;
+    if (isMobile())
+      battle = new Battle({ key: 'battle', player: player });
+    else {
+      battle = new BattleWeb({ key: 'battle', player: player });
+    }
     const config = {
       type: Phaser.AUTO,
       parent: "game",
@@ -33,13 +39,15 @@ const Main = (props) => {
       background: "black",
       scene: [loading, battle],
       scale: {
-        mode: Phaser.Scale.FIT,
+        mode: isMobile() ? Phaser.Scale.NONE : Phaser.Scale.FIT,
         parent: "game",
         autoCenter: Phaser.Scale.CENTER_BOTH,
         // width: 1024,
         // height: 768
-        width: isMobile() ? 1280 : window.innerWidth,
-        height: isMobile() ? 600 : window.innerHeight,
+        // width: isMobile() ? 1280 : window.innerWidth,
+        // height: isMobile() ? 600 : window.innerHeight,
+        width: window.innerWidth,
+        height: window.innerHeight,
 
       },
     };

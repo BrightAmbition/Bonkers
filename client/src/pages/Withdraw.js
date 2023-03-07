@@ -3,8 +3,9 @@ import api from "../utils/api";
 import { connect } from "react-redux";
 import { withDraw, loadUser } from '../actions/user';
 import { toast } from "react-toastify";
-
+import { Navigate } from "react-router-dom";
 const Withdraw = ({ auth, withDraw, loadUser }) => {
+
 
     const [users, setUsers] = useState([])
     const fetchScoreData = async () => {
@@ -15,6 +16,9 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
     useEffect(() => {
         fetchScoreData();
     }, [])
+    if (auth.isAuthenticated != true) {
+        return <Navigate to="/signup" />
+    }
     return (<>
         <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 m-auto py-20">
 
@@ -34,6 +38,7 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                         </thead>
                         <tbody className="text-[22px] text-[#128921] sm:text-[36px] md:text-[40px] lg:text-[48px]">
                             {
+                                auth.user &&
                                 users.map((user, index) => {
                                     if (user._id == auth.user._id)
                                         return <tr key={index} className={index == 0 ? "text-[#dfff00]" : ""}

@@ -1,24 +1,30 @@
 import Phaser from 'phaser'
 
 export default class Joystick extends Phaser.GameObjects.Sprite {
-    constructor({ scene, x, y, holder, pin }) {
+    constructor({ scene, x, y, holder, pin, delta }) {
 
         super(scene, x, y, holder);
 
         this.fixedToCamera = true;
+        this.scene = scene;
+        this.delta = delta;
 
+
+        this.prevX = 0;
         /* Pin indicator - what players think they drag */
         this.centerX = x;
         this.centerY = y;
-        scene.add.circle(x, y, 100, 0x00ff00).setAlpha(0.3).setDepth(9999);
+        scene.add.circle(x, y, 100, 0x00ff00).setAlpha(0.3).setDepth(9999).setScrollFactor(0);
         this.pin = scene.physics.add.sprite(x, y, pin, 0).setOrigin(0.5, 0.5).setDepth(9999);
+        this.pin.setScrollFactor(0);
         this.pin.setInteractive(new Phaser.Geom.Circle(this.pin.width / 2, this.pin.height / 2, this.pin.width / 2 - 10), Phaser.Geom.Circle.Contains);
+
         scene.input.setDraggable(this.pin);
         this.pin.on('pointerdown', () => {
 
             this.pin.setTint(0x44ff44);
             this.pin.setScale(1.2, 1.2);
-
+            this.prevX = this.scene.cameras.main.midPoint.x;
         });
 
 
@@ -43,8 +49,22 @@ export default class Joystick extends Phaser.GameObjects.Sprite {
         scene.input.on('drag', (pointer, gameObject, dragX, dragY) => {
 
 
-            let dx = dragX - this.centerX;
+            // console.log(this.scene.cameras.main.midPoint.x, delta);
+            // console.log(this.scene.cameras.main);
+
+
+            let d = this.scene.cameras.main.midPoint.x - this.prevX;
+
+
+            // d = 0;
+            let dx = dragX - this.centerX - d;
             let dy = dragY - this.centerY;
+
+
+            console.log(d, this.scene.cameras.main);
+
+
+
             let l = Math.sqrt((dx ** 2 + dy ** 2) / 10000);
             if (l != 0 && l >= 1) {
                 dx = dx / l;

@@ -31,7 +31,7 @@ function App() {
     }
     // try to fetch a user, if no token or invalid token we
     // will get a 401 response from our API
-    // store.dispatch(loadUser());
+    store.dispatch(loadUser());
 
     // log user out from all tabs if they log out in one tab
     window.addEventListener("storage", () => {
@@ -43,6 +43,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Layout />}>
+            <Route exact index element={<Sign />} />
             <Route exact path="signup" element={<Sign />} />
             <Route exact path="scoreboard" element={<Scoreboard />} />
             <Route exact path="selectcharacter" element={<CharacterSelection />} />

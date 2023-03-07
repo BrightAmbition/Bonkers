@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import { connect } from "react-redux";
 import { SHIBA, ZEPHYR, FIRE, LIGHTNING } from "./game/playerConfig";
-
-const CharacterSelection = () => {
+import { Navigate } from "react-router-dom";
+const CharacterSelection = ({ auth }) => {
 
     useEffect(() => {
 
@@ -11,6 +11,10 @@ const CharacterSelection = () => {
         console.log(elements);
         if (elements != null) elements.remove();
     }, [])
+
+    if (auth.isAuthenticated != true) {
+        return <Navigate to="/signup" />
+    }
     return (<>
         <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 m-auto py-20">
             <div className="rounded-[50px] bg-[#361728cc] p-10">
@@ -45,4 +49,8 @@ const CharacterSelection = () => {
         </div>
     </>);
 }
-export default CharacterSelection;
+const mapStateToProps = (state) => ({
+    auth: state.auth,
+    alerts: state.alert,
+});
+export default connect(mapStateToProps, null)(CharacterSelection);

@@ -18,7 +18,7 @@ class Character {
 
         this.shadow = this.scene.add.ellipse(config.x + config.shadow_x, config.y + config.shadow_y, config.shadow_width, config.shadow_height, "#000000", 0.7).setOrigin(0, 0).setScale(config.scale, config.scale);
         this.body = this.scene.physics.add.sprite(config.x, config.y, config.type, 0).setScale(config.scale, config.scale).setOrigin(0, 0);
-
+        this.body.setCollideWorldBounds(true);
 
 
         this.body.setBodySize(config.body_width, config.body_height, false);

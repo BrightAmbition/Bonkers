@@ -132,7 +132,10 @@ const Sign = ({ loadUser, logIn, signUp, auth, alerts }) => {
                 for="address"
                 class="block mb-2 text-sm font-medium text-gray-300 dark:text-white"
               >
-                WALLET ADDRESS {walletAddress}
+                WALLET ADDRESS {
+                  walletAddress &&
+                  walletAddress[0] + walletAddress[1] + walletAddress[2] + walletAddress[3] + '...' + walletAddress[walletAddress.length - 4] + walletAddress[walletAddress.length - 3] + walletAddress[walletAddress.length - 2] + walletAddress[walletAddress.length - 1]
+                }
               </label>
               <button
                 type="button"
