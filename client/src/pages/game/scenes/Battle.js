@@ -310,7 +310,7 @@ class Battle extends Scene {
             shadow_height: 20,
             shadow_x: 20,
             shadow_y: 90,
-            range: 100,
+            range: 120,
             hp: 10,
             currentHp: 10,
 
@@ -487,10 +487,12 @@ class Battle extends Scene {
         // this.txt.setText(`time:${~~(this.totalTime / 10)}`);
 
         if (this.enemies.length == 0) {
-            if (this.currentLevel == 5) {
+            if (this.currentLevel == 1) {
                 let sc = this.player.config.currentHp * 1000000 - this.totalTime;
-                alert(sc);
-                api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
+                // alert(sc);
+                // api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
+                this.scene.start('win', { type: this.type });
+
             }
             // this.currentLevel++;
             this.currentEnemies = 0;
@@ -931,7 +933,7 @@ class Battle extends Scene {
 
 
             if (!(h == null && v == null)) {
-                if (Math.abs(Math.sqrt(dx ** 2 + 0.5 * dy ** 2)) < this.enemies[i].config.range) {
+                if (Math.abs(Math.sqrt(dx ** 2 + 3 * dy ** 2)) < this.enemies[i].config.range) {
                     if (this.enemies[i].config.type != BOSS) {
                         this.enemies[i].updateState(STATE_ATTACKING_SIDE);
                     }
@@ -984,8 +986,8 @@ class Battle extends Scene {
         let x, y, range, speed;
         x = Math.random() * width;
         y = Math.random() * (height / 2);
-        speed = Math.random() * 30 + 30;
-        range = Math.random() * 40 + 60;
+        speed = Math.random() * 50 + 30;
+        range = Math.random() * 60 + 60;
 
 
         if (this.currentEnemies < MAX_ENEMY + (level == 1 ? 1 : 0))
@@ -1178,7 +1180,7 @@ class Battle extends Scene {
 
 
 
-            if (this.player.config.state != STATE_DYING && data.range > Math.sqrt(dx ** 2 + 0.5 * dy ** 2)) {
+            if (this.player.config.state != STATE_DYING && data.range > Math.sqrt(dx ** 2 + 3 * dy ** 2)) {
 
 
                 if (this.player.config.currentHp > 1) {

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Loading from './scenes/Loading';
 import Battle from "./scenes/Battle";
 import BattleWeb from "./scenes/BattleWeb";
+import Win from "./scenes/Win";
 
 import { Link } from "react-router-dom";
 import { isMobile } from "../../utils/utils";
@@ -17,6 +18,7 @@ const Main = (props) => {
 
   useEffect(() => {
     const loading = new Loading({ key: 'loading' });
+    const win = new Win({ key: 'win' });
     let player = location.state.player ? location.state.player : "Zephyr";
     let battle;
     if (isMobile())
@@ -37,7 +39,7 @@ const Main = (props) => {
         },
       },
       background: "black",
-      scene: [loading, battle],
+      scene: [loading, battle, win],
       scale: {
         mode: isMobile() ? Phaser.Scale.NONE : Phaser.Scale.FIT,
         parent: "game",
