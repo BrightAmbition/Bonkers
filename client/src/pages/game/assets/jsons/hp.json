@@ -5,240 +5,240 @@
             "frame": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP2",
             "frame": {
                 "x": 0,
-                "y": 281,
-                "w": 497,
-                "h": 280
+                "y": 300,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP3",
             "frame": {
                 "x": 0,
-                "y": 562,
-                "w": 497,
-                "h": 280
+                "y": 600,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP4",
             "frame": {
-                "x": 498,
+                "x": 505,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP5",
             "frame": {
-                "x": 498,
-                "y": 281,
-                "w": 497,
-                "h": 280
+                "x": 505,
+                "y": 300,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP6",
             "frame": {
-                "x": 498,
-                "y": 562,
-                "w": 497,
-                "h": 280
+                "x": 505,
+                "y": 600,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP7",
             "frame": {
                 "x": 0,
-                "y": 843,
-                "w": 497,
-                "h": 280
+                "y": 900,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP8",
             "frame": {
-                "x": 498,
-                "y": 843,
-                "w": 497,
-                "h": 280
+                "x": 505,
+                "y": 900,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP9",
             "frame": {
                 "x": 0,
-                "y": 1124,
-                "w": 497,
-                "h": 280
+                "y": 1200,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP10",
             "frame": {
-                "x": 498,
-                "y": 1124,
-                "w": 497,
-                "h": 280
+                "x": 505,
+                "y": 1200,
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         },
         {
             "filename": "HP11",
             "frame": {
-                "x": 996,
+                "x": 1010,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "rotated": false,
             "trimmed": false,
             "spriteSourceSize": {
                 "x": 0,
                 "y": 0,
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             },
             "sourceSize": {
-                "w": 497,
-                "h": 280
+                "w": 504,
+                "h": 299
             }
         }
     ],
     "meta": {
         "app": "https://www.leshylabs.com/apps/sstool/",
         "version": "Leshy SpriteSheet Tool v0.8.4",
-        "image": "hp.png",
+        "image": "HP4.png",
         "size": {
-            "w": 1493,
-            "h": 1404
+            "w": 1514,
+            "h": 1499
         },
         "scale": 1
     }

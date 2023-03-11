@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { BOSS, ZEPHYR, FIRE, STATE_SLIDING, BEAR, PLAYER, SKEL1, SKEL2 } from "../playerConfig";
+import { BOSS, ZEPHYR, FIRE, STATE_SLIDING, BEAR, PLAYER, SKEL1, SKEL2, STATE_ATTACKING_MAGIC } from "../playerConfig";
 import { } from "../playerConfig";
 import { STATE_ATTACKING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING, STATE_HURTING, STATE_KICKING, STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING, STATE_ATTACKING_SIDE } from '../playerConfig';
 import { LEFT, RIGHT, UP, DOWN } from '../playerConfig';
@@ -62,6 +62,8 @@ class Character {
                 this.setState(STATE_WAITING);
                 // this.body.setOrigin(0, 0);
             }
+            if (this.magicInterval != undefined)
+                clearInterval(this.magicInterval);
 
         })
 
@@ -213,7 +215,29 @@ class Character {
         this.setVelocity(0, 0);
         // this.setAttackFlag(14, 18);
         this.emitAttackSide(14);
-        this.setState(STATE_ATTACKING);
+        this.setState(STATE_ATTACKING_SIDE);
+    }
+
+    magicAttack = () => {
+        this.body.play(this.config.type + "AttackMagic");
+        this.setVelocity(0, 0);
+        this.setState(STATE_ATTACKING_MAGIC);
+        this.emitAttackMagic(28);
+    }
+
+    emitAttackMagic = (st) => {
+        setTimeout(() => {
+            if (this.config.state == STATE_ATTACKING_MAGIC)
+
+                this.magicInterval = setInterval(() => {
+                    this.body.emit("attackMagic", {
+                        x: this.x(),
+                        y: this.y(),
+                        range: this.config.range,
+                        direction: this.direction(),
+                    });
+                }, 100);
+        }, st * 1000 / 24)
     }
 
     emitAttackSide = (st) => {
@@ -274,6 +298,14 @@ class Character {
                 }
                 this.movePosition(data.directionH, data.directionV, 2);
                 break;
+            case STATE_ATTACKING_SIDE:
+                if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_RUNNING || this.config.state == STATE_WALKING)
+                    this.attackSide();
+                break;
+            case STATE_ATTACKING_MAGIC:
+                if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_RUNNING || this.config.state == STATE_WALKING)
+                    this.magicAttack();
+                break;
             case STATE_KICKING:
                 if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_RUNNING || this.config.state == STATE_WALKING) {
                     this.kick();
@@ -294,10 +326,7 @@ class Character {
                 if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_WALKING)
                     this.attack();
                 break;
-            case STATE_ATTACKING_SIDE:
-                if (this.config.state == STATE_WAITING || this.config.state == STATE_IDLING || this.config.state == STATE_WALKING)
-                    this.attackSide();
-                break;
+
 
         }
         this.shadow.setPosition(this.body.x + this.config.shadow_x, this.body.y + this.config.shadow_y);

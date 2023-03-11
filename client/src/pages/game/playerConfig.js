@@ -25,6 +25,7 @@ export const STATE_SLASHING_AIR = "slashing air";
 export const STATE_SLIDING = "sliding";
 export const STATE_DEAD = "dead";
 export const STATE_HURTING = "hurting";
+export const STATE_ATTACKING_MAGIC = "magic attack";
 
 //enemies
 export const STATE_ATTACKING = "attacking";
@@ -35,6 +36,8 @@ export const RIGHT = "right";
 export const UP = "up";
 export const DOWN = "down";
 
+
+export const MAGIC_RANGE = 150;
 export const MAX_ENEMY = 7;
 
 export const DELTA_X = 10; // range

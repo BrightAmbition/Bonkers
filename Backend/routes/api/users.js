@@ -15,10 +15,11 @@ const { withDraw, addScore, addEarn } = require("../../api/api");
 router.post("/withdraw", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
-    if (user.earn != true) {
-      user.earn = true;
+    if (user.earn > 0) {
+      let amount = user.earn;
+      user.earn = 0;
       await user.save();
-      await withDraw(user.solana_wallet, 207000);
+      await withDraw(user.solana_wallet, amount);
       res.status(200).send("success");
     } else {
       res.status(400).json({ errors: [{ msg: "No Earning!" }] });

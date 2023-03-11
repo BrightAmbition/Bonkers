@@ -1,8 +1,8 @@
 import Phaser, { Scene } from "phaser";
 // components
 import Character from "../components/Character";
-import { MAX_ENEMY, BEAR, BOSS, ZEPHYR, FIRE, LIGHTNING, SHIBA, LEFT, RIGHT, UP, DOWN, DELTA_X, DELTA_Y, SKEL1, SKEL2, STATE_ATTACKING_SIDE } from "../playerConfig";
-import { STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING, STATE_KICKING, STATE_SLIDING, STATE_ATTACKING, STATE_HURTING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING } from '../playerConfig';
+import { MAX_ENEMY, BEAR, BOSS, ZEPHYR, FIRE, LIGHTNING, SHIBA, LEFT, RIGHT, UP, DOWN, DELTA_X, DELTA_Y, SKEL1, SKEL2, STATE_ATTACKING_SIDE, MAGIC_RANGE } from "../playerConfig";
+import { STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING, STATE_SLIDING, STATE_ATTACKING, STATE_HURTING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING, STATE_ATTACKING_MAGIC } from '../playerConfig';
 
 import { sleep } from "../playerConfig";
 
@@ -33,15 +33,12 @@ import zephyr from "../assets/sprites/zephyr.png";
 import fire from "../assets/sprites/fire.png";
 import shiba from "../assets/sprites/shiba.png";
 import lightning from "../assets/sprites/lightning.png";
-import hp from "../assets/sprites/hp.png";
 
 import go from "../assets/sprites/go.png"
-import mana from "../assets/sprites/mana.png"
-
 import pin from "../assets/sprites/Pin.png";
 import pinBack from "../assets/sprites/Button Back.png";
 import buttonAttack from "../assets/sprites/Button Attack.png";
-import buttonKick from "../assets/sprites/Button Kick.png";
+import buttonAttackSide from "../assets/sprites/Button Kick.png";
 import buttonSlide from "../assets/sprites/Button Slide.png";
 
 import boss from "../assets/sprites/boss.png";
@@ -68,8 +65,11 @@ const shibaJson = require('../assets/jsons/shiba.json');
 const hpJson = require('../assets/jsons/hp.json');
 const manaJson = require('../assets/jsons/mana.json');
 
-const skeletonJson = require('../assets/jsons/skel1.json');
+const skeleton1Json = require('../assets/jsons/skel1.json');
+const skeleton2Json = require('../assets/jsons/skel2.json');
 const initialEnemey = [2, 6, 7, 8, 9];
+
+
 //
 
 // var width = isMobile() ? 1280 : window.innerWidth;
@@ -140,8 +140,8 @@ class Battle extends Scene {
 
 
 
-        this.load.atlas('skel1', skel1, skeletonJson);
-        this.load.atlas('skel2', skel1, skeletonJson);
+        this.load.atlas('skel1', skel1, skeleton1Json);
+        this.load.atlas('skel2', skel2, skeleton2Json);
         this.load.atlas("bear", bear, bearJson);
         this.load.atlas("boss", boss, bossJson);
 
@@ -161,13 +161,14 @@ class Battle extends Scene {
         }
 
 
-        this.load.atlas("hp", hp, hpJson);
-        this.load.atlas("mana", mana, hpJson);
+        this.load.atlas("hp", require(`../assets/sprites/HP/${this.type}HP.png`).default, hpJson);
+        this.load.image("mana", require(`../assets/sprites/mana/${this.type}MP.png`).default);
+
 
         this.load.image("pin", pin);
         this.load.image("pinBack", pinBack);
         this.load.image("buttonAttack", buttonAttack);
-        this.load.image("buttonKick", buttonKick);
+        this.load.image("buttonAttackSide", buttonAttackSide);
         this.load.image("buttonSlide", buttonSlide);
 
 
@@ -176,6 +177,10 @@ class Battle extends Scene {
 
         this.load.image("pinBack",)
 
+
+
+        this.load.atlas("magicFront", require(`../assets/sprites/magic/${this.type}/front.png`).default, require(`../assets/sprites/magic/${this.type}/front.json`));
+        this.load.atlas("magicBack", require(`../assets/sprites/magic/${this.type}/back.png`).default, require(`../assets/sprites/magic/${this.type}/back.json`));
         // this.load.atlas(ZEPHYR, zephyr, zephyrJson);
         // this.load.atlas("Fire", fire, fireJson);
 
@@ -275,7 +280,8 @@ class Battle extends Scene {
             this.statusBar = this.add.container((height - width) / 2 + 150, centerY - (width - height) / 2 + 30).setDepth(9999);
             this.hpBar = this.add.sprite(0, 0, "hp");
             this.manaBar = this.add.sprite(0, 0, "mana");
-            this.statusBar.add([this.hpBar, this.manaBar]).setScale(0.3, 0.3).setScrollFactor(0);
+            this.txt = this.add.text(40, 90, this.earn, { fontFamily: 'bonkerFont', fontSize: 80, color: '#ffdb5e' }).setOrigin(1, 0.5).setDepth(9999);
+            this.statusBar.add([this.hpBar, this.manaBar, this.txt]).setScale(0.5, 0.5).setScrollFactor(0);
         }
 
 
@@ -292,7 +298,10 @@ class Battle extends Scene {
 
 
         this.arrows = this.input.keyboard.createCursorKeys();
-        this.controllers = this.input.keyboard.addKeys('W,A,S,D,J,K,L');
+        this.controllers = this.input.keyboard.addKeys('W,A,S,D,J,K,L,M');
+
+        this.magicFront = this.add.sprite(0, 0, 'magicFront');
+        this.magicBack = this.add.sprite(0, 0, 'magicBack');
 
         this.player = new Character(this, {
             type: this.type,
@@ -301,15 +310,15 @@ class Battle extends Scene {
             y: centerY,
             speed: 40 * 1.25,
             state: STATE_WAITING,
-            scale: 0.7,
-            body_width: 100,
+            scale: 1,
+            body_width: 80,
             body_height: 20,
-            offsetY: 130,
-            offsetX: 30,
-            shadow_width: 100,
+            offsetY: 120,
+            offsetX: 35,
+            shadow_width: 80,
             shadow_height: 20,
-            shadow_x: 20,
-            shadow_y: 90,
+            shadow_x: 35,
+            shadow_y: 120,
             range: 120,
             hp: 10,
             currentHp: 10,
@@ -370,6 +379,94 @@ class Battle extends Scene {
 
 
         });
+        this.player.body.on("attackSide", (data) => {
+            //console.log("player attacking");
+            this.slashSound.play();
+            for (let i = 0; i < this.enemies.length; i++) {
+
+                if (this.enemies[i].config.state == STATE_DYING) continue;
+                if (this.enemies[i].currentHp <= 0) {
+                    this.enemies[i].updateState(STATE_DYING);
+                    continue;
+                }
+
+                let dx = this.getDeltaX(this.player, this.enemies[i]);
+                let dy = this.getDeltaY(this.player, this.enemies[i]);
+                let h = null;
+                let v = null;
+                if (dx > this.enemies[i].config.range)
+                    h = RIGHT;
+                if (dx < - this.enemies[i].config.range) h = LEFT;
+                else {
+
+                    if (dx > 0 && this.enemies[i].direction() == LEFT) {
+                        h = RIGHT;
+                    }
+                    else if (dx < 0 && this.enemies[i].direction() == RIGHT) {
+                        h = LEFT;
+                    }
+                }
+
+                if (dy > DELTA_Y)
+                    v = DOWN;
+                if (dy < -DELTA_Y) v = UP;
+
+                if (Math.abs(dx) <= this.player.config.range && Math.abs(dy) <= DELTA_Y * 5 && ((dx > 0 && this.player.direction() == LEFT) || ((dx < 0 && this.player.direction() == RIGHT)))) {
+                    //console.log("enemy is fool", this.enemies[i].config.currentHp)
+                    this.enemies[i].config.currentHp -= 2;
+                    if (this.enemies[i].config.currentHp >= 1) {
+                        this.enemies[i].updateState(STATE_HURTING);
+                    }
+                    else {
+                        this.enemies[i].updateState(STATE_DYING);
+                        this.enemies[i].die();
+                        this.bearDieSound.play();
+                    }
+
+
+                }
+            }
+
+
+        });
+
+        this.player.body.on("attackMagic", (data) => {
+
+            console.log("player attacking magic");
+            this.slashSound.play();
+            for (let i = 0; i < this.enemies.length; i++) {
+
+                if (this.enemies[i].config.state == STATE_DYING) continue;
+                if (this.enemies[i].currentHp <= 0) {
+                    this.enemies[i].updateState(STATE_DYING);
+                    continue;
+                }
+
+                let dx = this.getDeltaX(this.player, this.enemies[i]);
+                let dy = this.getDeltaY(this.player, this.enemies[i]);
+
+
+
+
+                if (Math.abs(dx) <= MAGIC_RANGE && Math.abs(dy) <= MAGIC_RANGE) {
+                    //console.log("enemy is fool", this.enemies[i].config.currentHp)
+                    this.enemies[i].config.currentHp = 0;
+                    if (this.enemies[i].config.currentHp >= 1) {
+                        this.enemies[i].updateState(STATE_HURTING);
+                    }
+                    else {
+                        this.enemies[i].updateState(STATE_DYING);
+                        this.enemies[i].die();
+                        this.bearDieSound.play();
+                    }
+
+
+                }
+            }
+
+
+        });
+
 
 
         // this.cameras.main.startFollow(this.player);
@@ -408,14 +505,14 @@ class Battle extends Scene {
                 this.buttonSpec = null;
             })
 
-            this.KickButton = this.add.sprite(height + (width - height) / 2 - 50, centerY + 100, 'buttonKick').setInteractive().setDepth(9999).setScale(0.2, 0.2);
-            this.KickButton.setScrollFactor(0);
-            this.KickButton.on('pointerdown', () => {
-                this.KickButton.setAlpha(0.5);
-                this.buttonSpec = "KICK";
+            this.AttackSideButton = this.add.sprite(height + (width - height) / 2 - 50, centerY + 100, 'buttonAttackSide').setInteractive().setDepth(9999).setScale(0.2, 0.2);
+            this.AttackSideButton.setScrollFactor(0);
+            this.AttackSideButton.on('pointerdown', () => {
+                this.AttackSideButton.setAlpha(0.5);
+                this.buttonSpec = "AttackSide";
             })
-            this.KickButton.on('pointerup', () => {
-                this.KickButton.setAlpha(1);
+            this.AttackSideButton.on('pointerup', () => {
+                this.AttackSideButton.setAlpha(1);
                 this.buttonSpec = null;
             })
         }
@@ -427,11 +524,8 @@ class Battle extends Scene {
         let sW = width / 1920
         let sH = height / 1080;
         this.defeatedImage = this.add.image(height / 2, centerY, "defeatedImage").setDepth(10000).setScrollFactor(0).setAlpha(0).setScale(sW, sH);
-
         this.go = this.add.image(width - 300, centerY - 50, 'go').setOrigin(0.5, 0.5).setScale(0.3, 0.3).setDepth(10000).setAlpha(0).setScrollFactor(0);
-
         this.numbers = this.add.sprite(height / 2, centerY, "numbers").setScale(0.2).setScrollFactor(0).setDepth(100001).setAlpha(0);
-
         // this.go.fix
         this.go.setScrollFactor(0)
 
@@ -607,9 +701,23 @@ class Battle extends Scene {
         //     jumpStarted = true;
         // }
 
-        //Kick
-        if (this.controllers.L.isDown || this.buttonSpec == "KICK") {
-            this.player.updateState(STATE_KICKING);
+        //AttackSide
+        if (this.controllers.M.isDown) {
+            if (this.player.config.state != STATE_ATTACKING_MAGIC) {
+                let r = this.getZindex(this.player);
+
+                this.magicBack.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
+                this.magicBack.setDepth(3 * r - 2);
+                this.magicBack.play('magicBack');
+
+
+                this.magicFront.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
+                this.magicFront.setDepth(3 * r + 2);
+                this.magicFront.play('magicFront');
+            }
+
+            this.player.updateState(STATE_ATTACKING_MAGIC);
+            return;
 
         }
         else if ((this.controllers.K.isDown || this.buttonSpec == "SLIDE") && this.isSliding == false) {
@@ -640,29 +748,35 @@ class Battle extends Scene {
                         directionV: v
                     });
                 }
+                else if (this.controllers.L.isDown || this.buttonSpec == "AttackSide") {
+                    this.player.updateState(STATE_ATTACKING_SIDE);
+                }
                 else this.player.updateState(STATE_RUNNING, {
                     directionH: h,
                     directionV: v
                 });
             }
-            else {
-                if (isSlashing) {
-                    this.player.updateState(STATE_SLASHING_IDLE, {
-                        directionH: h,
-                        directionV: v
-                    });
-                }
-                else {
-                    this.player.updateState(STATE_WALKING, {
-                        directionH: h,
-                        directionV: v
-                    });
-                }
-            }
+            // else {
+            //     if (isSlashing) {
+            //         this.player.updateState(STATE_SLASHING_IDLE, {
+            //             directionH: h,
+            //             directionV: v
+            //         });
+            //     }
+            //     else {
+            //         this.player.updateState(STATE_WALKING, {
+            //             directionH: h,
+            //             directionV: v
+            //         });
+            //     }
+            // }
         }
         else if (isSlashing) {
             this.player.updateState(STATE_SLASHING_IDLE);
             // not moving idle
+        }
+        else if (this.controllers.L.isDown || this.buttonSpec == "AttackSide") {
+            this.player.updateState(STATE_ATTACKING_SIDE);
         }
         else
             this.player.updateState(STATE_IDLING);
@@ -793,86 +907,68 @@ class Battle extends Scene {
 
         })
         this.anims.create({
+            key: "magicFront",
+            frames: this.anims.generateFrameNames('magicFront', { prefix: `Effects${this.type}`, start: 1, end: 114, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
+            key: "magicBack",
+            frames: this.anims.generateFrameNames('magicBack', { prefix: `Effects${this.type}`, start: 121, end: 234, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
             key: type + 'Die',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Dying_', start: 0, end: 14, zeroPad: 3 }),
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 1, end: 60, zeroPad: 4 }),
             frameRate: 24,
             // repeat: -1
         })
-        // this.anims.create({
-        //     key: type + 'Fall',
-        //     frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Falling Down_', start: 0, end: 5, zeroPad: 3 }),
-        //     frameRate: 24,
-        //     repeat: -1
-        // })
+
         this.anims.create({
-            key: type + 'Idle',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Idle Blinking_', start: 0, end: 17, zeroPad: 3 }),
+            key: type + 'AttackSide',
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 61, end: 90, zeroPad: 4 }),
             frameRate: 24,
-            repeat: -1
+        })
+
+        this.anims.create({
+            key: type + 'AttackMagic',
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 91, end: 210, zeroPad: 4 }),
+            frameRate: 24,
         })
         this.anims.create({
             key: type + 'Hurt',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Hurt_', start: 0, end: 11, zeroPad: 3 }),
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 211, end: 222, zeroPad: 4 }),
             frameRate: 24,
-
         })
-        // this.anims.create({
-        //     key: type + 'JumpLoop',
-        //     frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Jump Loop_', start: 0, end: 5, zeroPad: 3 }),
-        //     frameRate: 24,
-        //     repeat: -1
-        // })
-        // this.anims.create({
-        //     key: type + 'Jump',
-        //     frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Jump Start_', start: 0, end: 5, zeroPad: 3 }),
-        //     frameRate: 24,
-        //     repeat: -1
-        // })
         this.anims.create({
-            key: type + 'Kick',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Kicking_', start: 0, end: 11, zeroPad: 3 }),
+            key: type + 'Idle',
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 223, end: 240, zeroPad: 4 }),
             frameRate: 24,
+            repeat: -1
         })
         this.anims.create({
             key: type + 'Run',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Running_', start: 0, end: 11, zeroPad: 3 }),
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 241, end: 252, zeroPad: 4 }),
             frameRate: 24,
             repeat: -1
-        })
-        this.anims.create({
-            key: type + 'RunSlash',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Run Slashing_', start: 0, end: 11, zeroPad: 3 }),
-            frameRate: 24,
-            // repeat: -1
         })
         this.anims.create({
             key: type + 'Slash',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Slashing_', start: 0, end: 11, zeroPad: 3 }),
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 253, end: 264, zeroPad: 4 }),
             frameRate: 24,
-            // repeat: -1
         })
-        // this.anims.create({
-        //     key: type + 'SlashInAir',
-        //     frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Slashing in The Air_', start: 0, end: 11, zeroPad: 3 }),
-        //     frameRate: 24,
-        //     // repeat: -1
-        // })
+        this.anims.create({
+            key: type + 'RunSlash',
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 265, end: 276, zeroPad: 4 }),
+            frameRate: 24,
+        })
         this.anims.create({
             key: type + 'Slide',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Sliding_', start: 0, end: 5, zeroPad: 3 }),
+            frames: this.anims.generateFrameNames(type, { prefix: type, start: 277, end: 282, zeroPad: 4 }),
             frameRate: 24,
 
         })
-        this.anims.create({
-            key: type + 'Walk',
-            frames: this.anims.generateFrameNames(type, { prefix: type + '_Shiba_Walking_', start: 0, end: 23, zeroPad: 3 }),
-            frameRate: 24,
-            repeat: -1
-        })
     }
-    // createAnimations = (type) => {
-    //     this.createPlayerAnimations(type);
-    // }
+
 
     generateRandomState = () => {
 
@@ -924,6 +1020,8 @@ class Battle extends Scene {
 
 
 
+            //check magic
+
 
             if (Math.abs(dx) <= this.player.config.range && Math.abs(dy) <= DELTA_Y && ((dx > 0 && this.player.direction() == LEFT) || ((dx < 0 && this.player.direction() == RIGHT)))) {
                 if (this.player.attacking == true) {
@@ -933,7 +1031,7 @@ class Battle extends Scene {
 
 
             if (!(h == null && v == null)) {
-                if (Math.abs(Math.sqrt(dx ** 2 + 3 * dy ** 2)) < this.enemies[i].config.range) {
+                if (this.player.config.state != STATE_DYING && Math.abs(dx) <= this.player.config.range && Math.abs(dy) <= DELTA_Y * 5 && ((dx < 0 && this.player.direction() == LEFT) || ((dx > 0 && this.player.direction() == RIGHT)))) {
                     if (this.enemies[i].config.type != BOSS) {
                         this.enemies[i].updateState(STATE_ATTACKING_SIDE);
                     }
@@ -967,7 +1065,7 @@ class Battle extends Scene {
             this.enemies[i].setZindex(3 * r + 1);
         }
         r = this.getZindex(this.player);
-        this.player.setZindex(3 * r - 1 + 1);
+        this.player.setZindex(3 * r);
 
     }
 
@@ -1043,7 +1141,7 @@ class Battle extends Scene {
                     currentHp: ~~(level) / 2 + 1,
                 });
             }
-            else if (r > 0.3) {
+            else if (r > 0.6) {
 
                 newE = new Character(this, {
                     type: SKEL1,
@@ -1076,14 +1174,14 @@ class Battle extends Scene {
                     speed: speed * 1.25,
                     state: STATE_IDLING,
                     scale: 1,
-                    body_width: 60,
+                    body_width: 120,
                     body_height: 10,
-                    shadow_width: 60,
+                    shadow_width: 120,
                     shadow_height: 15,
-                    offsetY: 100,
-                    offsetX: 55,
-                    shadow_x: 70,
-                    shadow_y: 120,
+                    offsetY: 160,
+                    offsetX: 90,
+                    shadow_x: 90,
+                    shadow_y: 160,
                     range: range + 1,
                     hp: ~~(level) / 2 + 1,
                     currentHp: ~~(level) / 2 + 1,
@@ -1104,8 +1202,8 @@ class Battle extends Scene {
             }
             this.earn += newEarn;
             console.log(this.earn);
+            this.txt.setText(this.earn);
             api.post("/users/addEarn", { earn: newEarn });
-
 
         })
         newE.body.on("attack", (data) => {
@@ -1134,7 +1232,7 @@ class Battle extends Scene {
 
 
 
-            if (this.player.config.state != STATE_DYING && Math.abs(dx) <= data.range && Math.abs(dy) <= DELTA_Y && ((dx < 0 && data.direction == LEFT) || ((dx > 0 && data.direction == RIGHT)))) {
+            if (this.player.config.state != STATE_ATTACKING_MAGIC && this.player.config.state != STATE_DYING && Math.abs(dx) <= data.range && Math.abs(dy) <= DELTA_Y && ((dx < 0 && data.direction == LEFT) || ((dx > 0 && data.direction == RIGHT)))) {
 
 
                 if (this.player.config.currentHp > 1) {
@@ -1180,7 +1278,7 @@ class Battle extends Scene {
 
 
 
-            if (this.player.config.state != STATE_DYING && data.range > Math.sqrt(dx ** 2 + 3 * dy ** 2)) {
+            if (this.player.config.state != STATE_ATTACKING_MAGIC && this.player.config.state != STATE_DYING && Math.abs(dx) <= data.range && Math.abs(dy) <= DELTA_Y * 5 && ((dx < 0 && data.direction == LEFT) || ((dx > 0 && data.direction == RIGHT)))) {
 
 
                 if (this.player.config.currentHp > 1) {
@@ -1225,7 +1323,6 @@ class Battle extends Scene {
         // }
         this.currentLevel++;
         for (let i = 0; i < initialEnemey[this.currentLevel - 1]; i++) {
-            // setTimeout(() => { }, 1000)            
             this.createBear(this.currentLevel);
             await sleep(1000);
         }

@@ -39,6 +39,7 @@ class Win extends Scene {
             alpha: 1,
             duration: 5000,
             ease: "Power1",
+            onComplete:()=>{document.getElementById("navTowith").click();}
         })
     }
     update() {

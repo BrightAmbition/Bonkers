@@ -16,8 +16,11 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
     useEffect(() => {
         fetchScoreData();
     }, [])
-    if (auth.isAuthenticated != true) {
+    if (auth.isAuthenticated == false) {
         return <Navigate to="/signup" />
+    }
+    else if (auth.isAuthenticated == undefined) {
+        return <>Loading</>
     }
     return (<>
         <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 m-auto py-20">
@@ -31,9 +34,10 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                     <table className="w-full text-center">
                         <thead className="sm:text-[26px] text-[16px] text-[#b5eeff] border-b">
                             <tr>
-                                <th >Rank</th>
-                                <th >Name</th>
+                                <th className="hidden sm:block">Rank</th>
+                                <th className="hidden sm:block">Name</th>
                                 <th >Score</th>
+                                <th >Earn</th>
                             </tr>
                         </thead>
                         <tbody className="text-[22px] text-[#128921] sm:text-[36px] md:text-[40px] lg:text-[48px]">
@@ -43,16 +47,17 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                                     if (user._id == auth.user._id)
                                         return <tr key={index} className={index == 0 ? "text-[#dfff00]" : ""}
                                         >
-                                            <td>{index + 1}</td>
-                                            <td>{user.name}</td>
+                                            <td className="hidden sm:block">{index + 1}</td>
+                                            <td className="hidden sm:block">{user.name}</td>
                                             <td>{user.score}</td>
+                                            <td>{user.earn}</td>
                                         </tr>
                                 })
                             }
 
                         </tbody>
                     </table>
-                    <div className="text-[20px] text-[#128921] text-center mt-10">With draw your Bonkers! (207,000)</div>
+                    <div className="text-[20px] text-[#128921] text-center mt-10">With draw your Bonkers!</div>
                     <div className="w-full flex justify-center">
                         <button className="bg-blue-600 rounded-lg px-5 py-2 mt-5 text-gray-200" onClick={async () => {
                             let score = 0;
@@ -65,6 +70,7 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                                 if (auth.user.earn == true)
                                     toast.error("You already withdraw");
                                 else {
+                                    toast.warning("Please wait while withdrawing");
                                     await withDraw();
                                     toast.success("You withdraw successfully!");
                                 }

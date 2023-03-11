@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 import Loading from './scenes/Loading';
 import Battle from "./scenes/Battle";
-import BattleWeb from "./scenes/BattleWeb";
+// import BattleWeb from "./scenes/BattleWeb";
 import Win from "./scenes/Win";
 
 import { Link } from "react-router-dom";
@@ -23,9 +23,9 @@ const Main = (props) => {
     let battle;
     if (isMobile())
       battle = new Battle({ key: 'battle', player: player });
-    else {
-      battle = new BattleWeb({ key: 'battle', player: player });
-    }
+    // else {
+    //   battle = new BattleWeb({ key: 'battle', player: player });
+    // }
     const config = {
       type: Phaser.AUTO,
       parent: "game",
