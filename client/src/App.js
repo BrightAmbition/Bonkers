@@ -43,10 +43,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Layout />}>
-            {/* <Route exact index element={<Sign />} /> */}
+            <Route exact index element={<CharacterSelection />} />
             <Route exact path="signup" element={<Sign />} />
             <Route exact path="scoreboard" element={<Scoreboard />} />
-            <Route exact path="selectcharacter" element={<CharacterSelection />} />
+            <Route exact index path="selectcharacter" element={<CharacterSelection />} />
             <Route exact path="withdraw" element={<Withdraw />} />
           </Route>
           <Route exact path="game" element={<Main />} />

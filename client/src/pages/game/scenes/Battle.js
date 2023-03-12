@@ -208,7 +208,7 @@ class Battle extends Scene {
             loadingText.setOrigin(0.5, 0.5);
 
             var percentText = this.make.text({
-                x: width / 2,
+                x: height / 2,
                 y: centerY - 5,
                 text: '0%',
                 style: {
@@ -494,6 +494,17 @@ class Battle extends Scene {
                 this.buttonSpec = null;
             })
 
+            this.MagicButton = this.add.sprite(height + (width - height) / 2 - 125, centerY + 150, 'buttonAttack').setInteractive().setDepth(9999).setScale(0.2, 0.2);
+            this.MagicButton.setScrollFactor(0);
+            this.MagicButton.on('pointerdown', () => {
+                this.MagicButton.setAlpha(0.5);
+                this.buttonSpec = "MAGIC";
+            })
+            this.MagicButton.on('pointerup', () => {
+                this.MagicButton.setAlpha(1);
+                this.buttonSpec = null;
+            })
+
             this.SlashButton = this.add.sprite(height + (width - height) / 2 - 125, centerY + 50, 'buttonAttack').setInteractive().setDepth(9999).setScale(0.2, 0.2);
             this.SlashButton.setScrollFactor(0);
             this.SlashButton.on('pointerdown', () => {
@@ -581,7 +592,7 @@ class Battle extends Scene {
         // this.txt.setText(`time:${~~(this.totalTime / 10)}`);
 
         if (this.enemies.length == 0) {
-            if (this.currentLevel == 1) {
+            if (this.currentLevel == 5) {
                 let sc = this.player.config.currentHp * 1000000 - this.totalTime;
                 // alert(sc);
                 // api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
@@ -702,7 +713,7 @@ class Battle extends Scene {
         // }
 
         //AttackSide
-        if (this.controllers.M.isDown) {
+        if (this.controllers.M.isDown || this.buttonSpec == "MAGIC") {
             if (this.player.config.state != STATE_ATTACKING_MAGIC) {
                 let r = this.getZindex(this.player);
 
@@ -834,30 +845,30 @@ class Battle extends Scene {
         // bear animation
         this.anims.create({
             key: 'bossIdle',
-            frames: this.anims.generateFrameNames('boss', { prefix: 'Potato Idle_', start: 0, end: 13, zeroPad: 2 }),
+            frames: this.anims.generateFrameNames('boss', { prefix: 'Boss', start: 66, end: 110, zeroPad: 4 }),
             frameRate: 24,
             repeat: -1
         })
         this.anims.create({
             key: 'bossAttack',
-            frames: this.anims.generateFrameNames('boss', { prefix: 'Potato Attack_', start: 0, end: 16, zeroPad: 2 }),
+            frames: this.anims.generateFrameNames('boss', { prefix: 'Boss', start: 216, end: 250, zeroPad: 4 }),
             frameRate: 24,
         })
         this.anims.create({
             key: 'bossDie',
-            frames: this.anims.generateFrameNames('boss', { prefix: 'Potato Die_', start: 0, end: 53, zeroPad: 2 }),
+            frames: this.anims.generateFrameNames('boss', { prefix: 'Boss', start: 1, end: 65, zeroPad: 4 }),
             frameRate: 24,
             // repeat: -1
         })
         this.anims.create({
             key: 'bossWalk',
-            frames: this.anims.generateFrameNames('boss', { prefix: 'Potato walk_', start: 0, end: 19, zeroPad: 2 }),
+            frames: this.anims.generateFrameNames('boss', { prefix: 'Boss', start: 111, end: 155, zeroPad: 4 }),
             frameRate: 24,
             repeat: -1
         })
         this.anims.create({
             key: 'bossHurt',
-            frames: this.anims.generateFrameNames('boss', { prefix: 'Potato Hurt_', start: 0, end: 9, zeroPad: 2 }),
+            frames: this.anims.generateFrameNames('boss', { prefix: 'Boss', start: 156, end: 175, zeroPad: 4 }),
             frameRate: 24,
             //repeat: -1
         })
@@ -1088,7 +1099,7 @@ class Battle extends Scene {
         range = Math.random() * 60 + 60;
 
 
-        if (this.currentEnemies < MAX_ENEMY + (level == 1 ? 1 : 0))
+        if (this.currentEnemies < MAX_ENEMY + (level == 5 ? 1 : 0))
             this.currentEnemies++;
         else return;
 
@@ -1101,15 +1112,15 @@ class Battle extends Scene {
                 y: y,
                 speed: speed * 1.25,
                 state: STATE_IDLING,
-                scale: 1.2,
+                scale: 1,
                 body_width: 160,
                 body_height: 20,
-                shadow_width: 140,
+                shadow_width: 160,
                 shadow_height: 20,
-                offsetX: 50,
-                offsetY: 190,
-                shadow_x: 100,
-                shadow_y: 230,
+                offsetX: 40,
+                offsetY: 220,
+                shadow_x: 40,
+                shadow_y: 220,
                 range: 120,
                 hp: 6,
                 currentHp: 6,

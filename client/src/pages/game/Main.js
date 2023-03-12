@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 import Loading from './scenes/Loading';
 import Battle from "./scenes/Battle";
-// import BattleWeb from "./scenes/BattleWeb";
+import BattleWeb from "./scenes/BattleWeb";
 import Win from "./scenes/Win";
 
 import { Link } from "react-router-dom";
@@ -23,9 +23,9 @@ const Main = (props) => {
     let battle;
     if (isMobile())
       battle = new Battle({ key: 'battle', player: player });
-    // else {
-    //   battle = new BattleWeb({ key: 'battle', player: player });
-    // }
+    else {
+      battle = new BattleWeb({ key: 'battle', player: player });
+    }
     const config = {
       type: Phaser.AUTO,
       parent: "game",
@@ -33,25 +33,22 @@ const Main = (props) => {
       physics: {
         default: "arcade",
         arcade: {
-          debug: true,
+          //debug: true,
           gravityY: 0
 
         },
       },
-      background: "black",
-      scene: [loading, battle, win],
       scale: {
-        mode: isMobile() ? Phaser.Scale.NONE : Phaser.Scale.FIT,
+        mode: isMobile() ? Phaser.Scale.NONE : Phaser.Scale.NONE,
         parent: "game",
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        // width: 1024,
-        // height: 768
-        // width: isMobile() ? 1280 : window.innerWidth,
-        // height: isMobile() ? 600 : window.innerHeight,
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: isMobile() ? window.innerWidth : 800,
+        height: isMobile() ? window.innerHeight : 400,
 
       },
+      background: "black",
+      scene: [loading, battle, win],
+
     };
     const game = new Phaser.Game(config);
     game.scene.start('loading');
@@ -64,6 +61,9 @@ const Main = (props) => {
   return <>
 
     {/* <Link to="/withdraw" id="navTowith" /> */}
+    <div className="h-screen flex items-center justify-center">
+      <div id="game"></div>
+    </div>
     <Link to="/withdraw" id="navTowith" />
   </>;
 };
