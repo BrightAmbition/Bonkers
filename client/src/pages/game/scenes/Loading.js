@@ -4,7 +4,7 @@ import { isMobile } from "../../../utils/utils";
 var width = isMobile() ? window.innerWidth : 800;
 var height = isMobile() ? window.innerHeight : 400;
 
-var description = "This is my mono game. Little Bonkers is really amazing single kick off type game. With 4 characters";
+var description = `Peblo (Cets on Crek)*: Little Bonkers! Help me! I'm very badly wounded, but I need your help to deliver this *Melk to the edge of the Dark Forest. Be Careful! The OKAY Bears have... mutated. I... I... Love Crek. dies`;
 class Loading extends Scene {
     constructor(props) {
         super(props);
