@@ -127,26 +127,18 @@ class BattleWeb extends Scene {
         this.load.audio('audioSlash', audioSlash);
         this.load.audio('audioEnd', audioEnd);
         this.load.audio('audioContinue', audioDefeat);
-
-
         this.load.image('go', go);
         this.load.image("background1", back1);
         this.load.image("background2", back2);
         this.load.image("background3", back3);
         this.load.image("background4", back4);
         this.load.image("background5", back5);
-
         this.load.image('back', back);
-
-
-
         this.load.atlas('skel1', skel1, skeleton1Json);
         this.load.atlas('skel2', skel2, skeleton2Json);
         this.load.atlas("bear", bear, bearJson);
         this.load.atlas("boss", boss, bossJson);
-
         this.load.atlas('numbers', numbers, numbersJson);
-
         if (this.type == FIRE) {
             this.load.atlas(this.type, fire, fireJson);
         }
@@ -159,12 +151,8 @@ class BattleWeb extends Scene {
         if (this.type == ZEPHYR) {
             this.load.atlas(this.type, zephyr, zephyrJson);
         }
-
-
         this.load.atlas("hp", require(`../assets/sprites/HP/${this.type}HP.png`).default, hpJson);
         this.load.image("mana", require(`../assets/sprites/mana/${this.type}MP.png`).default);
-
-
         this.load.image("pin", pin);
         this.load.image("pinBack", pinBack);
         this.load.image("buttonAttack", buttonAttack);
@@ -585,6 +573,7 @@ class BattleWeb extends Scene {
                 let sc = this.player.config.currentHp * 1000000 - this.totalTime;
                 // alert(sc);
                 // api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
+                this.player.stopAll();
                 this.scene.start('win', { type: this.type });
 
             }

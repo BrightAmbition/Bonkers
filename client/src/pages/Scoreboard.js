@@ -38,7 +38,7 @@ const Scoreboard = ({ auth }) => {
                                 <th >Score</th>
                             </tr>
                         </thead>
-                        <tbody className="text-[22px] text-[#128921] sm:text-[36px] md:text-[40px] lg:text-[48px]">
+                        <tbody className="text-[22px] text-gray-400 sm:text-[36px] md:text-[40px] lg:text-[48px]">
                             {
                                 users.slice(0, users.length > 20 ? 20 : users.length).map((user, index) => {
 

@@ -22,6 +22,7 @@ class Character {
 
         // if (this.config.type == SKEL1 || this.config.type == SKEL2)
         //     this.body.setOrigin(0.5, 0.5);
+
         this.body.setCollideWorldBounds(true);
 
 
@@ -114,6 +115,10 @@ class Character {
             if (directionH == RIGHT) this.body.setVelocityX(s);
         }
     }
+    stopAll = () => {
+        this.setState(STATE_WAITING);
+        clearInterval(this.magicInterval);
+    }
 
     /// animations
     idle = () => {
@@ -121,13 +126,8 @@ class Character {
         this.body.play(this.config.type + "Idle")
         this.body.setVelocity(0);
         this.setState(STATE_IDLING);
-
-
     }
-
     slide = () => {
-
-
         this.body.play(this.config.type + "Slide")
         this.body.setVelocity(0);
         // this.body.setOrigin(1, 0.5);
@@ -139,7 +139,6 @@ class Character {
         this.body.setVelocity(0);
         this.setState(STATE_HURTING)
     }
-
     jump = () => {
 
     }

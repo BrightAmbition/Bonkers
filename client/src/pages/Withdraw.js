@@ -34,21 +34,21 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                     <table className="w-full text-center">
                         <thead className="sm:text-[26px] text-[16px] text-[#b5eeff] border-b">
                             <tr>
-                                <th className="hidden sm:block">Rank</th>
-                                <th className="hidden sm:block">Name</th>
+                                <th className="hidden sm:inline sm:mr-5">Rank</th>
+                                <th className="hidden sm:inline">Name</th>
                                 <th >Score</th>
                                 <th >Earn</th>
                             </tr>
                         </thead>
-                        <tbody className="text-[22px] text-[#128921] sm:text-[36px] md:text-[40px] lg:text-[48px]">
+                        <tbody className="text-[22px] text-gray-400 sm:text-[36px] md:text-[40px] lg:text-[48px]">
                             {
                                 auth.user &&
                                 users.map((user, index) => {
                                     if (user._id == auth.user._id)
                                         return <tr key={index} className={index == 0 ? "text-[#dfff00]" : ""}
                                         >
-                                            <td className="hidden sm:block">{index + 1}</td>
-                                            <td className="hidden sm:block">{user.name}</td>
+                                            <td className="hidden sm:inline sm:mr-5">{index + 1}</td>
+                                            <td className="hidden sm:inline">{user.name}</td>
                                             <td>{user.score}</td>
                                             <td>{user.earn}</td>
                                         </tr>
@@ -66,18 +66,15 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                                     score = user.score;
                             })
 
-                            if (score > 0) {
-                                if (auth.user.earn == true)
-                                    toast.error("You already withdraw");
-                                else {
-                                    toast.warning("Please wait while withdrawing");
-                                    await withDraw();
-                                    toast.success("You withdraw successfully!");
-                                }
-                            }
+
+                            if (auth.user.earn == true)
+                                toast.error("You already withdraw");
                             else {
-                                toast.error("You didn't complete the game");
+                                toast.warning("Please wait while withdrawing");
+                                await withDraw();
+                                toast.success("You withdraw successfully!");
                             }
+
                         }}> withdraw</button>
                     </div>
                 </div>

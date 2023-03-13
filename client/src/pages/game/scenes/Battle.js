@@ -596,6 +596,7 @@ class Battle extends Scene {
                 let sc = this.player.config.currentHp * 1000000 - this.totalTime;
                 // alert(sc);
                 // api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
+                this.player.stopAll();
                 this.scene.start('win', { type: this.type });
 
             }
@@ -919,12 +920,12 @@ class Battle extends Scene {
         })
         this.anims.create({
             key: "magicFront",
-            frames: this.anims.generateFrameNames('magicFront', { prefix: `Effects${this.type}`, start: 1, end: 114, zeroPad: 4 }),
+            frames: this.anims.generateFrameNames('magicFront', { prefix: `Effects${this.type}`, start: 1, end: 120, zeroPad: 4 }),
             frameRate: 24,
         })
         this.anims.create({
             key: "magicBack",
-            frames: this.anims.generateFrameNames('magicBack', { prefix: `Effects${this.type}`, start: 121, end: 234, zeroPad: 4 }),
+            frames: this.anims.generateFrameNames('magicBack', { prefix: `Effects${this.type}`, start: 121, end: 240, zeroPad: 4 }),
             frameRate: 24,
         })
         this.anims.create({

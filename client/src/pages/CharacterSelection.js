@@ -19,7 +19,7 @@ const CharacterSelection = ({ auth }) => {
         return <>Loading</>
     }
     return (<>
-        <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 mx-auto py-5 md:py-20">
+        <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 mx-auto py-5 md:pt-20">
             <div className="rounded-[50px] bg-[#361728cc] p-10">
                 <div id="score-title" className="text-center text-[32px] md:text-[40px] sm:text-[50px] text-orange-300 my-5">
                     Select Characters

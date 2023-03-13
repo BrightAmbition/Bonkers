@@ -47,12 +47,12 @@
   /* background-position: center; */
   background-position: right;
   /* filter: contrast(3) saturate(1); */
-  /* height: calc(100vh - 52px); */
+  height: calc(100vh - 52px);
 
   /* position: absolute;
   top: 0px;
   z-index: -1; */
-  min-height: 100%;
+  /* min-height: 100%; */
   display: flex;
   justify-content: center;
   flex-direction: column;

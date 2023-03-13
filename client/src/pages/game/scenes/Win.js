@@ -2,8 +2,10 @@ import { Scene } from "phaser";
 // import logo from '../assets/load/8.png';
 import { SHIBA, FIRE, LIGHTNING, ZEPHYR } from "../playerConfig";
 
-var height = window.innerHeight
-var width = window.innerWidth
+import { isMobile } from "../../../utils/utils";
+var height = isMobile() ? 800 : window.innerHeight;
+var width = isMobile() ? 400 : window.innerWidth;
+
 
 class Win extends Scene {
     constructor(props) {
@@ -13,8 +15,6 @@ class Win extends Scene {
     }
     init(data) {
         this.type = data.type;
-
-
     }
     preload() {
         this.load.image("winLogo", require(`../assets/sprites/${this.type}_win.jpg`).default);
@@ -39,7 +39,7 @@ class Win extends Scene {
             alpha: 1,
             duration: 5000,
             ease: "Power1",
-            onComplete:()=>{document.getElementById("navTowith").click();}
+            onComplete: () => { document.getElementById("navTowith").click(); }
         })
     }
     update() {
