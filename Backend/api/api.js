@@ -30,7 +30,7 @@ const addScore = async (userId, score) => {
 
 const withDraw = async (walletAddress, tamount) => {
   console.log(walletAddress, tamount);
-  let amount = 1;
+  let amount = tamount;
   var connection = new web3.Connection(web3.clusterApiUrl("mainnet-beta"));
   // Construct a `Keypair` from secret key
   var fromWallet = web3.Keypair.fromSecretKey(

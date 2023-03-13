@@ -99,7 +99,7 @@ class BattleWeb extends Scene {
 
         this.earn = 0;
         this.totalTime = 0;
-
+        this.magicEffect = false;
         this.type = props.player;
 
         this.currentLevel = 0;
@@ -692,20 +692,19 @@ class BattleWeb extends Scene {
 
         //AttackSide
         if (this.controllers.M.isDown) {
-            if (this.player.config.state != STATE_ATTACKING_MAGIC) {
+            if (this.player.config.state != STATE_ATTACKING_MAGIC && this.magicEffect > 0) {
+                this.magicEffect--;
                 let r = this.getZindex(this.player);
-
                 this.magicBack.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
                 this.magicBack.setDepth(3 * r - 2);
                 this.magicBack.play('magicBack');
-
-
                 this.magicFront.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
                 this.magicFront.setDepth(3 * r + 2);
                 this.magicFront.play('magicFront');
+                this.player.updateState(STATE_ATTACKING_MAGIC);
             }
 
-            this.player.updateState(STATE_ATTACKING_MAGIC);
+
             return;
 
         }

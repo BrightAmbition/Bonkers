@@ -3,8 +3,8 @@ import { Scene } from "phaser";
 import { SHIBA, FIRE, LIGHTNING, ZEPHYR } from "../playerConfig";
 
 import { isMobile } from "../../../utils/utils";
-var height = isMobile() ? 800 : window.innerHeight;
-var width = isMobile() ? 400 : window.innerWidth;
+var height = !isMobile() ? 400 : window.innerHeight;
+var width = !isMobile() ? 800 : window.innerWidth;
 
 
 class Win extends Scene {
@@ -32,6 +32,7 @@ class Win extends Scene {
 
         sw = width / 792;
         sh = height / 432;
+
         this.logo.setScale(sw, sh);
         this.logo.setAlpha(0);
         this.tweens.add({
