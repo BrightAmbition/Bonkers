@@ -119,7 +119,7 @@ class BattleWeb extends Scene {
     preload() {
 
 
-
+        this.load.audio('magicEffect', require(`../assets/audio/magic/${this.type}.wav`).default);
         this.load.audio('intro', audio1);
         this.load.audio('introBoss', audioBoss);
         this.load.audio('audioBearAttack', audioBearAttack);
@@ -251,6 +251,7 @@ class BattleWeb extends Scene {
         this.bearDieSound = this.sound.add("audioBearDie");
         this.endSound = this.sound.add('audioEnd');
         this.continueSound = this.sound.add('audioContinue');
+        this.magicSound = this.sound.add('magicEffect');
         //==================================================
         {
             let scaleW = width / 3000 * 5;
@@ -421,7 +422,7 @@ class BattleWeb extends Scene {
         this.player.body.on("attackMagic", (data) => {
 
             console.log("player attacking magic");
-            this.slashSound.play();
+            // this.slashSound.play();
             for (let i = 0; i < this.enemies.length; i++) {
 
                 if (this.enemies[i].config.state == STATE_DYING) continue;
@@ -710,9 +711,12 @@ class BattleWeb extends Scene {
                 this.magicBack.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
                 this.magicBack.setDepth(3 * r - 2);
                 this.magicBack.play('magicBack');
+
                 this.magicFront.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
                 this.magicFront.setDepth(3 * r + 2);
                 this.magicFront.play('magicFront');
+
+                this.magicSound.play();
                 this.player.updateState(STATE_ATTACKING_MAGIC);
             }
 
