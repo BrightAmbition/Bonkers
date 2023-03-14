@@ -7,7 +7,6 @@ import Loading from './scenes/Loading';
 import Battle from "./scenes/Battle";
 import BattleWeb from "./scenes/BattleWeb";
 import Win from "./scenes/Win";
-
 import { Link } from "react-router-dom";
 import { isMobile } from "../../utils/utils";
 const boardConfig = require("./config.json");

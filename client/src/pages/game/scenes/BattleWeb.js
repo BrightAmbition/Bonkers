@@ -99,7 +99,7 @@ class BattleWeb extends Scene {
 
         this.earn = 0;
         this.totalTime = 0;
-        this.magicEffect = false;
+        this.magicEffect = 2;
         this.type = props.player;
 
         this.currentLevel = 0;
@@ -520,8 +520,9 @@ class BattleWeb extends Scene {
 
 
         this.input.on('pointerup', (pointer) => {
-            if (pointer.leftButtonReleased() && this.defeatedImage.alpha == 1) {
-                window.location.reload();
+            if (pointer.leftButtonReleased()) {
+                if (this.defeatedImage.alpha == 1)
+                    window.location.reload();
             }
         });
         await this.nextLevel();
@@ -548,10 +549,21 @@ class BattleWeb extends Scene {
                 ease: 'Power2',
                 delay: 3000,
                 onComplete: () => {
+                    let buttonText = this.add.text(this.numbers.x, this.numbers.y + 100, 'Click here to withdraw your bonkers', { color: '#ffffff' }).setDepth(10000).setOrigin(0.5, 0.5);
+                    let buttonRect = this.add.rectangle(buttonText.x, buttonText.y, buttonText.width, buttonText.height, 0xffffff);
+
+                    //make the button interactive
+                    buttonRect.setInteractive();
+
+                    //set the on click event for the button
+                    buttonRect.on('pointerup', () => {
+                        document.getElementById("navTowith").click();
+                    });
                     this.numbers.setAlpha(1);
                     this.numbers.play('Number');
                     this.numbers.on('animationcomplete', () => {
                         window.location.reload();
+
                     })
 
                 },
@@ -1019,7 +1031,7 @@ class BattleWeb extends Scene {
 
 
             if (!(h == null && v == null)) {
-                if (this.player.config.state != STATE_DYING && Math.abs(dx) <= this.player.config.range && Math.abs(dy) <= DELTA_Y * 5 && ((dx < 0 && this.player.direction() == LEFT) || ((dx > 0 && this.player.direction() == RIGHT)))) {
+                if (this.player.config.state != STATE_DYING && Math.abs(dx) <= this.enemies[i].config.range && Math.abs(dy) <= DELTA_Y * 5 && ((dx < 0 && this.player.direction() == LEFT) || ((dx > 0 && this.player.direction() == RIGHT)))) {
                     if (this.enemies[i].config.type != BOSS) {
                         this.enemies[i].updateState(STATE_ATTACKING_SIDE);
                     }
@@ -1072,8 +1084,8 @@ class BattleWeb extends Scene {
         let x, y, range, speed;
         x = Math.random() * width;
         y = Math.random() * (height / 2);
-        speed = Math.random() * 50 + 30;
-        range = Math.random() * 60 + 60;
+        speed = Math.random() * 30 + 30;
+        range = Math.random() * 50 + 120;
 
 
         if (this.currentEnemies < MAX_ENEMY + (level == 5 ? 1 : 0))
