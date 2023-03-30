@@ -55,6 +55,9 @@ import audioEnd from "../assets/audio/GameEnd.wav";
 import audioDefeat from "../assets/audio/Continue.mp3";
 // import audioBearAttack from "../assets/audio/ZombieAttack.wav";
 //json
+import flag from "../assets/sprites/flag.png";
+
+const flagJson = require('../assets/jsons/flag.json');
 
 const bossJson = require('../assets/jsons/boss.json');
 const bearJson = require('../assets/jsons/bear.json');
@@ -182,6 +185,8 @@ class Battle extends Scene {
 
         this.load.atlas("magicFront", require(`../assets/sprites/magic/${this.type}/front.png`).default, require(`../assets/sprites/magic/${this.type}/front.json`));
         this.load.atlas("magicBack", require(`../assets/sprites/magic/${this.type}/back.png`).default, require(`../assets/sprites/magic/${this.type}/back.json`));
+
+        this.load.atlas("flag", flag, flagJson);
         // this.load.atlas(ZEPHYR, zephyr, zephyrJson);
         // this.load.atlas("Fire", fire, fireJson);
 
@@ -294,6 +299,12 @@ class Battle extends Scene {
         this.createBossAnimations();
         this.createSkeletonAnimations();
 
+        this.createFlagAnimations();
+
+        for (var i = 0; i < 100; i++) {
+            let t = this.add.sprite(40 + i * 200, 120 + (width - height) / 2, "flag");
+            t.play("flag1");
+        }
 
         // this.test = this.add.circle().
 
@@ -1108,7 +1119,23 @@ class Battle extends Scene {
         return rank;
     }
 
-
+    createFlagAnimations = () => {
+        this.anims.create({
+            key: "flag1",
+            frames: this.anims.generateFrameNames('flag', { prefix: 'V100', start: 1, end: 45, zeroPad: 2 }),
+            repeat: -1
+        })
+        this.anims.create({
+            key: "flag2",
+            frames: this.anims.generateFrameNames('flag', { prefix: 'V200', start: 1, end: 45, zeroPad: 2 }),
+            repeat: -1
+        })
+        this.anims.create({
+            key: "flag3",
+            frames: this.anims.generateFrameNames('flag', { prefix: 'V300', start: 1, end: 45, zeroPad: 2 }),
+            repeat: -1
+        })
+    }
     createBear = (level) => {
         let x, y, range, speed;
         x = Math.random() * width;

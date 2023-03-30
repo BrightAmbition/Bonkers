@@ -15,7 +15,7 @@ const { withDraw, addScore, addEarn } = require("../../api/api");
 router.post("/withdraw", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id);
-    if (user.earn > 0) {
+    if (user.earn > 0 && user.earn <= 100000) {
       let amount = user.earn;
       user.earn = 0;
       await user.save();

@@ -8,7 +8,7 @@ const addEarn = async (userId, earn) => {
     const user = await User.findById(userId);
     user.earn = user.earn + earn;
 
-    if (user.earn > 1000000) user.earn = 1000000;
+    if (user.earn > 100000) user.earn = 100000;
     await user.save();
     console.log(user.earn);
   } catch (err) {

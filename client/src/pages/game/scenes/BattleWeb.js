@@ -55,7 +55,10 @@ import audioEnd from "../assets/audio/GameEnd.wav";
 import audioDefeat from "../assets/audio/Continue.mp3";
 // import audioBearAttack from "../assets/audio/ZombieAttack.wav";
 //json
+//flag
+import flag from "../assets/sprites/flag.png";
 
+const flagJson = require('../assets/jsons/flag.json');
 const bossJson = require('../assets/jsons/boss.json');
 const bearJson = require('../assets/jsons/bear.json');
 const zephyrJson = require('../assets/jsons/zephyr.json');
@@ -68,6 +71,10 @@ const manaJson = require('../assets/jsons/mana.json');
 const skeleton1Json = require('../assets/jsons/skel1.json');
 const skeleton2Json = require('../assets/jsons/skel2.json');
 const initialEnemey = [2, 6, 7, 8, 9];
+
+
+
+
 
 
 //
@@ -117,6 +124,8 @@ class BattleWeb extends Scene {
     }
 
     preload() {
+
+
 
 
         this.load.audio('magicEffect', require(`../assets/audio/magic/${this.type}.wav`).default);
@@ -169,6 +178,8 @@ class BattleWeb extends Scene {
 
         this.load.atlas("magicFront", require(`../assets/sprites/magic/${this.type}/front.png`).default, require(`../assets/sprites/magic/${this.type}/front.json`));
         this.load.atlas("magicBack", require(`../assets/sprites/magic/${this.type}/back.png`).default, require(`../assets/sprites/magic/${this.type}/back.json`));
+
+        this.load.atlas("flag", flag, flagJson);
         // this.load.atlas(ZEPHYR, zephyr, zephyrJson);
         // this.load.atlas("Fire", fire, fireJson);
 
@@ -280,8 +291,13 @@ class BattleWeb extends Scene {
         this.createBearAnimations();
         this.createBossAnimations();
         this.createSkeletonAnimations();
+        this.createFlagAnimations();
 
+        for (var i = 0; i < 100; i++) {
+            let t = this.add.sprite(100 + i * 200, 120, "flag");
+            t.play("flag1");
 
+        }
         // this.test = this.add.circle().
 
 
@@ -903,6 +919,23 @@ class BattleWeb extends Scene {
             //repeat: -1
         })
     }
+    createFlagAnimations = () => {
+        this.anims.create({
+            key: "flag1",
+            frames: this.anims.generateFrameNames('flag', { prefix: 'V100', start: 1, end: 45, zeroPad: 2 }),
+            repeat: -1
+        })
+        this.anims.create({
+            key: "flag2",
+            frames: this.anims.generateFrameNames('flag', { prefix: 'V200', start: 1, end: 45, zeroPad: 2 }),
+            repeat: -1
+        })
+        this.anims.create({
+            key: "flag3",
+            frames: this.anims.generateFrameNames('flag', { prefix: 'V300', start: 1, end: 45, zeroPad: 2 }),
+            repeat: -1
+        })
+    }
     createPlayerAnimations = (type = ZEPHYR) => {
         this.anims.create({
             key: "Number",
@@ -1361,5 +1394,7 @@ class BattleWeb extends Scene {
         if (this.player.x() + this.player.body.body.width / 2 < this.currentLevel * width) return true;
         return false;
     }
+
+
 }
 export default BattleWeb;

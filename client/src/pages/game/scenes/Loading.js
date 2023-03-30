@@ -39,10 +39,20 @@ class Loading extends Scene {
             color: '#ffffff'
         }).setOrigin(0, 0);
 
+        this.skipTxt = this.add.text(width / 2, -50, 'Click here to skip...', {
+            color: '#ffffff'
+        }).setOrigin(0.5, 0.5);
+
+        this.skipTxt.setInteractive();
+        this.skipTxt.on('pointerup', () => {
+            clearInterval(this.interv);
+            this.scene.start("battle");
+        });
+
         this.bar = this.add.rectangle(0, 0, width, 100, '0xd3854f').setOrigin(0, 0);
         this.insideBar = this.add.rectangle(6, 6, width - 12, 100 - 12, '0x000000').setOrigin(0, 0);
 
-        this.dialogs.add([this.bar, this.insideBar, this.txt]).setAlpha(0);
+        this.dialogs.add([this.bar, this.insideBar, this.txt, this.skipTxt]).setAlpha(0);
         this.txt.setWordWrapWidth(width - 20);
 
 
@@ -61,6 +71,7 @@ class Loading extends Scene {
         // 
     }
     async startDialog() {
+        let skipText = this.add.text()
         return new Promise(resolve => {
             let len = description.length;
             let index = 0;

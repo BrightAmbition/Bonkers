@@ -22,10 +22,9 @@ const Scoreboard = ({ auth }) => {
     }
     return (<>
 
-        <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 m-auto py-20">
-
-            <div className="rounded-[50px] bg-[#361728cc] p-10">
-                <div id="score-title" className="text-center text-[32px] md:text-[40px] sm:text-[50px] text-orange-300 my-5">
+        <div id="score-board" className="w-3/4 md:w-2/3 lg:w-1/2 m-auto py-20 h-4/5">
+            <div className="rounded-[50px] bg-[#361728cc] p-10 overflow-y-scroll h-full">
+                <div id="score-title" className=" text-center text-[32px] md:text-[40px] sm:text-[50px] text-orange-300 my-5">
                     Score Board
                 </div>
 
