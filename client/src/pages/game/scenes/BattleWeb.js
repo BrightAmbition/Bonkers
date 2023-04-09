@@ -293,7 +293,7 @@ class BattleWeb extends Scene {
         this.createSkeletonAnimations();
         this.createFlagAnimations();
 
-        for (var i = 0; i < 100; i++) {
+        for (var i = 1; i < 2; i++) {
             let t = this.add.sprite(100 + i * 200, 120, "flag");
             t.play("flag1");
 

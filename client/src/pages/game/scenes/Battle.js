@@ -301,7 +301,7 @@ class Battle extends Scene {
 
         this.createFlagAnimations();
 
-        for (var i = 0; i < 100; i++) {
+        for (var i = 1; i < 2; i++) {
             let t = this.add.sprite(40 + i * 200, 120 + (width - height) / 2, "flag");
             t.play("flag1");
         }

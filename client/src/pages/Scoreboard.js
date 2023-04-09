@@ -45,7 +45,7 @@ const Scoreboard = ({ auth }) => {
                                     >
                                         <td>{index + 1}</td>
                                         <td>{user.name}</td>
-                                        <td>{user.score}</td>
+                                        <td>{user.earn}</td>
                                     </tr>
                                 })
                             }
