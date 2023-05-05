@@ -3,39 +3,30 @@ import Phaser from "phaser";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-import Loading from './scenes/Loading';
-import Battle from "./scenes/Battle";
-import BattleWeb from "./scenes/BattleWeb";
-import Win from "./scenes/Win";
 
+import Gatcha from "./scenes/Gatcha";
 
 import { Link } from "react-router-dom";
 import { isMobile } from "../../utils/utils";
 
 const boardConfig = require("./config.json");
 
-const Main = (props) => {
+const MainGatcha = (props) => {
 
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
-    const loading = new Loading({ key: 'loading' });
-    const win = new Win({ key: 'win' });
-    let player = location.state.player ? location.state.player : "Zephyr";
-    let battle;
-    if (isMobile())
-      battle = new Battle({ key: 'battle', player: player });
-    else {
-      battle = new BattleWeb({ key: 'battle', player: player });
-    }
+    const gatcha = new Gatcha({ key: 'gatcha' });
+    // let player = location.state.player ? location.state.player : "Zephyr";
+
     const config = {
       type: Phaser.AUTO,
       parent: "game",
-      // ...boardConfig,
+      ...boardConfig,
       physics: {
         default: "arcade",
         arcade: {
-          //debug: true,
+          debug: true,
           gravityY: 0
 
         },
@@ -44,12 +35,13 @@ const Main = (props) => {
         mode: isMobile() ? Phaser.Scale.NONE : Phaser.Scale.NONE,
         parent: "game",
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: isMobile() ? window.innerWidth : 800,
-        height: isMobile() ? window.innerHeight : 400,
+        width: window.innerWidth,
+        height: window.innerHeight,
       },
 
       background: "green",
-      scene: [loading, battle, win],
+      // scene: [loading, battle, win],
+      scene: [gatcha]
 
     };
     const game = new Phaser.Game(config);
@@ -70,4 +62,4 @@ const Main = (props) => {
   </>;
 };
 
-export default Main;
+export default MainGatcha;

@@ -13,5 +13,8 @@ const User = new mongoose.Schema({
   earn: {
     type: Number,
   },
+  sec: {
+    type: Number,
+  }
 });
 module.exports = mongoose.model("user", User);

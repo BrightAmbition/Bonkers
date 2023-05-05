@@ -2,12 +2,18 @@ var web3 = require("@solana/web3.js");
 const { Token, TOKEN_PROGRAM_ID } = require("@solana/spl-token");
 const bs58 = require("bs58");
 const User = require("../model/User");
+function decrypt(text) {
+  return Math.sqrt(text + 4) - 2;
+}
 
-const addEarn = async (userId, earn) => {
+const addEarn = async (userId, earn, sec) => {
   try {
-    const user = await User.findById(userId);
-    user.earn = user.earn + earn;
 
+    const user = await User.findById(userId);
+    console.log(user.sec, decrypt(sec));
+    if (decrypt(sec) != user.sec) throw new Error();
+    user.earn = user.earn + earn;
+    user.sec = user.sec + Math.random() * 10;
     if (user.earn > 100000) user.earn = 100000;
     await user.save();
     console.log(user.earn);

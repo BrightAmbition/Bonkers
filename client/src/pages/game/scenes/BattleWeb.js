@@ -46,6 +46,8 @@ import boss from "../assets/sprites/boss.png";
 import audio1 from "../assets/audio/Level1Music.mp3"
 import audioBoss from "../assets/audio/BossMusic.mp3"
 
+import magicIndicator from "../assets/sprites/magic.png";
+
 
 
 import audioBearAttack from "../assets/audio/ZombieAttack.wav";
@@ -124,10 +126,7 @@ class BattleWeb extends Scene {
     }
 
     preload() {
-
-
-
-
+        this.load.image('magicIndicator', magicIndicator);
         this.load.audio('magicEffect', require(`../assets/audio/magic/${this.type}.wav`).default);
         this.load.audio('intro', audio1);
         this.load.audio('introBoss', audioBoss);
@@ -281,7 +280,9 @@ class BattleWeb extends Scene {
             this.hpBar = this.add.sprite(0, 0, "hp");
             this.manaBar = this.add.sprite(0, 0, "mana");
             this.txt = this.add.text(40, 90, this.earn, { fontFamily: 'bonkerFont', fontSize: 80, color: '#ffdb5e' }).setOrigin(1, 0.5).setDepth(9999);
-            this.statusBar.add([this.hpBar, this.manaBar, this.txt]).setScale(0.5, 0.5).setScrollFactor(0);
+            this.magicTxt = this.add.text(75, 150, this.magicEffect, { fontFamily: 'bonkerFont', fontSize: 60, color: '#dbdeff' }).setDepth(9999).setOrigin(0.5, 0.5);
+            this.magicIndicator = this.add.image(25, 150, "magicIndicator").setScale(0.6, 0.6).setDepth(9999);
+            this.statusBar.add([this.hpBar, this.manaBar, this.txt, this.magicIndicator, this.magicTxt]).setScale(0.5, 0.5).setScrollFactor(0);
         }
 
 
@@ -723,6 +724,7 @@ class BattleWeb extends Scene {
         if (this.controllers.M.isDown) {
             if (this.player.config.state != STATE_ATTACKING_MAGIC && this.magicEffect > 0) {
                 this.magicEffect--;
+                this.magicTxt.setText(this.magicEffect);
                 let r = this.getZindex(this.player);
                 this.magicBack.setPosition(this.player.x(), this.player.y() + 50).setOrigin(0.5, 1).setScale(1.5, 1.5);
                 this.magicBack.setDepth(3 * r - 2);
@@ -1240,7 +1242,11 @@ class BattleWeb extends Scene {
             this.earn += newEarn;
             console.log(this.earn);
             this.txt.setText(this.earn);
-            api.post("/users/addEarn", { earn: newEarn });
+
+            const response = await api.get("/users/security");
+            const sec = response.data;
+            console.log("sec:", sec);
+            api.post("/users/addEarn", { earn: newEarn, sec: sec * sec + 4 * sec });
 
         })
         newE.body.on("attack", (data) => {

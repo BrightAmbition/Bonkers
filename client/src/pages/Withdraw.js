@@ -37,7 +37,7 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                                 <th className="hidden sm:inline sm:mr-5">Rank</th>
                                 <th className="hidden sm:inline">Name</th>
                                 <th >Score</th>
-                                <th >Earn</th>
+                                {/* <th >Earn</th> */}
                             </tr>
                         </thead>
                         <tbody className="text-[22px] text-gray-400 sm:text-[36px] md:text-[40px] lg:text-[48px]">
@@ -49,7 +49,7 @@ const Withdraw = ({ auth, withDraw, loadUser }) => {
                                         >
                                             <td className="hidden sm:inline sm:mr-5">{index + 1}</td>
                                             <td className="hidden sm:inline">{user.name}</td>
-                                            <td>{user.score}</td>
+                                            {/* <td>{user.score}</td> */}
                                             <td>{user.earn}</td>
                                         </tr>
                                 })

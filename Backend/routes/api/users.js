@@ -32,8 +32,9 @@ router.post("/withdraw", auth, async (req, res) => {
 
 router.post("/addScore", auth, async (req, res) => {
   try {
+
     console.log("addscore", req.user.id, req.body.score);
-    await addScore(req.user.id, req.body.score);
+    await addScore(req.user.id, req.body.score, req.body.sec);
     res.status(200).send("success");
   }
   catch (err) {
@@ -42,10 +43,23 @@ router.post("/addScore", auth, async (req, res) => {
   }
 });
 
+router.get('/security', auth, async (req, res) => {
+  try {
+    var value = String(Math.random() * 10000);
+    const user = await User.findById(req.user.id);
+    user.sec = value;
+    await user.save();
+    res.status(200).send(value);
+  }
+  catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+})
 router.post("/addEarn", auth, async (req, res) => {
   try {
     console.log("addEarn", req.user.id, req.body.earn);
-    await addEarn(req.user.id, req.body.earn);
+    await addEarn(req.user.id, req.body.earn, req.body.sec);
     res.status(200).send("success");
   }
   catch (err) {

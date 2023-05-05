@@ -16,6 +16,7 @@ import { LOGOUT } from "./actions/types";
 
 
 import Main from './pages/game/Main';
+import MainGatcha from "./pages/game/MainGatcha";
 import Scoreboard from "./pages/Scoreboard";
 import CharacterSelection from "./pages/CharacterSelection";
 import Withdraw from "./pages/Withdraw";
@@ -50,6 +51,7 @@ function App() {
             <Route exact path="withdraw" element={<Withdraw />} />
           </Route>
           <Route exact path="game" element={<Main />} />
+          <Route exact path="gatcha" element={<MainGatcha />} />
         </Routes>
       </BrowserRouter>
     </Provider>
