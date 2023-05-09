@@ -4,6 +4,9 @@ export const BOSS = "boss";
 export const SKEL1 = "skel1";
 export const SKEL2 = "skel2";
 
+export const GORILLA1 = "gorilla1";
+export const GORILLA2 = "gorilla2";
+
 export const ZEPHYR = "Zephyr";
 export const FIRE = "Fire";
 export const LIGHTNING = "Lightning"
@@ -38,7 +41,7 @@ export const DOWN = "down";
 
 
 export const MAGIC_RANGE = 150;
-export const MAX_ENEMY = 7;
+export const MAX_ENEMY = 1;
 
 export const DELTA_X = 10; // range
 export const DELTA_Y = 2;

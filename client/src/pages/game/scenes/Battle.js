@@ -1,7 +1,7 @@
 import Phaser, { Scene } from "phaser";
 // components
 import Character from "../components/Character";
-import { MAX_ENEMY, BEAR, BOSS, ZEPHYR, FIRE, LIGHTNING, SHIBA, LEFT, RIGHT, UP, DOWN, DELTA_X, DELTA_Y, SKEL1, SKEL2, STATE_ATTACKING_SIDE, MAGIC_RANGE } from "../playerConfig";
+import { MAX_ENEMY, BEAR, BOSS, ZEPHYR, FIRE, LIGHTNING, SHIBA, LEFT, RIGHT, UP, DOWN, DELTA_X, DELTA_Y, GORILLA1, GORILLA2, SKEL1, SKEL2, STATE_ATTACKING_SIDE, MAGIC_RANGE } from "../playerConfig";
 import { STATE_RUNNING, STATE_SLASHING_IDLE, STATE_SLASHING_RUNNING, STATE_SLIDING, STATE_ATTACKING, STATE_HURTING, STATE_IDLING, STATE_WALKING, STATE_DYING, STATE_WAITING, STATE_ATTACKING_MAGIC } from '../playerConfig';
 
 import { sleep } from "../playerConfig";
@@ -17,17 +17,15 @@ import numbers from '../assets/sprites/numbers.png';
 import numbersJson from '../assets/jsons/numbers.json';
 import defeatedImage from '../assets/sprites/defeat.png';
 
-import back1 from '../assets/background/game_background_1.png';
-import back2 from '../assets/background/game_background_2.png';
-import back3 from '../assets/background/game_background_3.png';
-import back4 from '../assets/background/game_background_4.png';
-import back5 from '../assets/background/game_background_5.png';
+
 
 import back from '../assets/sprites/back.png';
-
+import back2 from '../assets/sprites/back2.png';
 
 import skel1 from '../assets/sprites/skel1.png';
 import skel2 from '../assets/sprites/skel2.png';
+import gorilla1 from '../assets/sprites/gorilla1.png';
+import gorilla2 from '../assets/sprites/gorilla2.png';
 import bear from '../assets/sprites/bear.png'
 import zephyr from "../assets/sprites/zephyr.png";
 import fire from "../assets/sprites/fire.png";
@@ -70,7 +68,9 @@ const manaJson = require('../assets/jsons/mana.json');
 
 const skeleton1Json = require('../assets/jsons/skel1.json');
 const skeleton2Json = require('../assets/jsons/skel2.json');
-const initialEnemey = [2, 6, 7, 8, 9];
+const gorilla1Json = require('../assets/jsons/gorilla1.json');
+const gorilla2Json = require('../assets/jsons/gorilla2.json');
+const initialEnemey = [2, 2, 2, 2, 2];
 
 
 //
@@ -82,6 +82,7 @@ var width = window.innerHeight
 
 var centerY = window.innerHeight / 2;
 
+var gameLevel = 1;
 class Battle extends Scene {
     constructor(props = null) {
 
@@ -134,18 +135,15 @@ class Battle extends Scene {
 
 
         this.load.image('go', go);
-        this.load.image("background1", back1);
-        this.load.image("background2", back2);
-        this.load.image("background3", back3);
-        this.load.image("background4", back4);
-        this.load.image("background5", back5);
-
         this.load.image('back', back);
-
-
+        this.load.image('back2', back2);
 
         this.load.atlas('skel1', skel1, skeleton1Json);
         this.load.atlas('skel2', skel2, skeleton2Json);
+
+        this.load.atlas('gorilla1', gorilla1, gorilla1Json);
+        this.load.atlas('gorilla2', gorilla2, gorilla2Json);
+
         this.load.atlas("bear", bear, bearJson);
         this.load.atlas("boss", boss, bossJson);
 
@@ -256,6 +254,18 @@ class Battle extends Scene {
 
 
     }
+    resetGame() {
+        this.currentLevel = 0;
+        this.player.setPosition(width / 2 - 100, centerY);
+        if (gameLevel == 2) {
+            let backImg = this.backImages.pop();
+            backImg.destroy();
+            let scaleW = width / 1440 * 5;
+            let scaleH = height / 162;
+            this.backImages.push(this.add.image(0, centerY, "back2").setOrigin(0, 0.5).setScale(scaleW, scaleH));
+        }
+
+    }
     async create() {
 
         //controller
@@ -300,7 +310,7 @@ class Battle extends Scene {
         this.createBearAnimations();
         this.createBossAnimations();
         this.createSkeletonAnimations();
-
+        this.createGorillaAnimations();
         this.createFlagAnimations();
 
         for (var i = 1; i < 2; i++) {
@@ -620,11 +630,18 @@ class Battle extends Scene {
 
         if (this.enemies.length == 0) {
             if (this.currentLevel == 5) {
-                let sc = this.player.config.currentHp * 1000000 - this.totalTime;
-                // alert(sc);
-                // api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
-                this.player.stopAll();
-                this.scene.start('win', { type: this.type });
+                if (gameLevel == 1) {
+                    gameLevel++;
+
+                    this.resetGame();
+                }
+                else if (gameLevel == 2) {
+                    let sc = this.player.config.currentHp * 1000000 - this.totalTime;
+                    // alert(sc);
+                    // api.post("/users/addScore", { score: sc }).then((res) => { document.getElementById("navTowith").click(); });
+                    this.player.stopAll();
+                    this.scene.start('win', { type: this.type });
+                }
 
             }
             // this.currentLevel++;
@@ -873,7 +890,46 @@ class Battle extends Scene {
         this.createSubSkeletonAnimations(1);
         this.createSubSkeletonAnimations(2);
     }
-
+    createSubGorillaAnimations = (type) => {
+        this.anims.create({
+            key: `gorilla${type}Idle`,
+            frames: this.anims.generateFrameNames(`gorilla${type}`, { prefix: 'Gorilla', start: 1, end: 45, zeroPad: 4 }),
+            frameRate: 24,
+            repeat: -1
+        })
+        this.anims.create({
+            key: `gorilla${type}Attack`,
+            frames: this.anims.generateFrameNames(`gorilla${type}`, { prefix: 'Gorilla', start: 146, end: 180, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
+            key: `gorilla${type}AttackSide`,
+            frames: this.anims.generateFrameNames(`gorilla${type}`, { prefix: 'Gorilla', start: 181, end: 215, zeroPad: 4 }),
+            frameRate: 24,
+        })
+        this.anims.create({
+            key: `gorilla${type}Die`,
+            frames: this.anims.generateFrameNames(`gorilla${type}`, { prefix: 'Gorilla', start: 111, end: 145, zeroPad: 4 }),
+            frameRate: 24,
+            // repeat: -1
+        })
+        this.anims.create({
+            key: `gorilla${type}Walk`,
+            frames: this.anims.generateFrameNames(`gorilla${type}`, { prefix: 'Gorilla', start: 46, end: 90, zeroPad: 4 }),
+            frameRate: 24,
+            repeat: -1
+        })
+        this.anims.create({
+            key: `gorilla${type}Hurt`,
+            frames: this.anims.generateFrameNames(`gorilla${type}`, { prefix: 'Gorilla', start: 91, end: 110, zeroPad: 4 }),
+            frameRate: 24,
+            //repeat: -1
+        })
+    }
+    createGorillaAnimations = () => {
+        this.createSubGorillaAnimations(1);
+        this.createSubGorillaAnimations(2);
+    }
     createBossAnimations = () => {
         // bear animation
         this.anims.create({
@@ -1203,7 +1259,7 @@ class Battle extends Scene {
             else if (r > 0.6) {
 
                 newE = new Character(this, {
-                    type: SKEL1,
+                    type: gameLevel == 1 ? SKEL1 : GORILLA1,
                     direction: RIGHT,
                     x: x + (this.currentLevel - 1) * width,
                     y: y,
@@ -1226,7 +1282,7 @@ class Battle extends Scene {
             else {
 
                 newE = new Character(this, {
-                    type: SKEL2,
+                    type: gameLevel == 2 ? SKEL2 : GORILLA2,
                     direction: RIGHT,
                     x: x + (this.currentLevel - 1) * width,
                     y: y,

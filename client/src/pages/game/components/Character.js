@@ -8,7 +8,6 @@ import { LEFT, RIGHT, UP, DOWN } from '../playerConfig';
 class Character {
 
     constructor(scene, config) {
-
         this.scene = scene;
 
         this.config = { ...config };
@@ -25,19 +24,11 @@ class Character {
 
         this.body.setCollideWorldBounds(true);
 
-
-
-
         this.body.setBodySize(config.body_width, config.body_height, false);
         this.body.setBodySize(config.body_width, config.body_height, false);
         this.body.body.setOffset(config.offsetX, config.offsetY);
-
-
         this.attacking = false;
-
-
         //event
-
         this.body.on("animationcomplete", ({ key }) => {
             console.log('animation', key);
             if (key == this.config.type + "Hurt") {
@@ -71,6 +62,10 @@ class Character {
 
 
 
+    }
+    setPosition = (x, y) => {
+        this.shadow.setPosition(x + this.config.shadow_x, this.config.y + this.config.shadow_y);
+        this.body.setPosition(x, y)
     }
     setState = (state) => {
         this.config.state = state;

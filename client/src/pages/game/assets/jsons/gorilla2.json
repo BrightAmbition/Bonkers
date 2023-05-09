@@ -1,1 +1,4529 @@
-{"frames":[{"filename":"Gorilla20211","frame":{"x":0,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20210","frame":{"x":0,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20209","frame":{"x":0,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20208","frame":{"x":335,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20207","frame":{"x":335,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20206","frame":{"x":335,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20205","frame":{"x":0,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20204","frame":{"x":335,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20203","frame":{"x":0,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20202","frame":{"x":335,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20201","frame":{"x":670,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20200","frame":{"x":670,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20199","frame":{"x":670,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20198","frame":{"x":670,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20197","frame":{"x":670,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20196","frame":{"x":0,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20195","frame":{"x":335,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20194","frame":{"x":670,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20193","frame":{"x":1005,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20192","frame":{"x":1005,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20191","frame":{"x":1005,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20190","frame":{"x":1005,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20189","frame":{"x":1005,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20188","frame":{"x":1005,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20187","frame":{"x":0,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20186","frame":{"x":335,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20185","frame":{"x":670,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20184","frame":{"x":1005,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20183","frame":{"x":0,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20182","frame":{"x":335,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20181","frame":{"x":670,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20180","frame":{"x":1005,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20179","frame":{"x":1340,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20178","frame":{"x":1340,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20177","frame":{"x":1340,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20176","frame":{"x":1340,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20175","frame":{"x":1340,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20174","frame":{"x":1340,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20173","frame":{"x":1340,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20172","frame":{"x":1340,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20171","frame":{"x":0,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20170","frame":{"x":335,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20169","frame":{"x":670,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20168","frame":{"x":1005,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20167","frame":{"x":1340,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20166","frame":{"x":0,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20165","frame":{"x":335,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20164","frame":{"x":670,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20163","frame":{"x":1005,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20162","frame":{"x":1340,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20161","frame":{"x":1675,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20160","frame":{"x":1675,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20159","frame":{"x":1675,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20155","frame":{"x":1675,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20154","frame":{"x":1675,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20153","frame":{"x":1675,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20152","frame":{"x":1675,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20150","frame":{"x":1675,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20146","frame":{"x":1675,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20133","frame":{"x":1675,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20134","frame":{"x":0,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20131","frame":{"x":335,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20151","frame":{"x":670,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20132","frame":{"x":1005,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20129","frame":{"x":1340,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20130","frame":{"x":1675,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20158","frame":{"x":2010,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20127","frame":{"x":2010,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20125","frame":{"x":2010,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20126","frame":{"x":2010,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20147","frame":{"x":2010,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20148","frame":{"x":2010,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20128","frame":{"x":2010,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20119","frame":{"x":2010,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20120","frame":{"x":2010,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20118","frame":{"x":2010,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20121","frame":{"x":2010,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20117","frame":{"x":0,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20157","frame":{"x":335,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20156","frame":{"x":670,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20144","frame":{"x":1005,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20137","frame":{"x":1340,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20136","frame":{"x":1675,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20138","frame":{"x":2010,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20114","frame":{"x":0,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20115","frame":{"x":335,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20142","frame":{"x":670,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20139","frame":{"x":1005,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20135","frame":{"x":1340,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20140","frame":{"x":1675,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20112","frame":{"x":2010,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20113","frame":{"x":2345,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20106","frame":{"x":2345,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20101","frame":{"x":2345,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20104","frame":{"x":2345,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20110","frame":{"x":2345,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20102","frame":{"x":2345,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20105","frame":{"x":2345,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20103","frame":{"x":2345,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20124","frame":{"x":2345,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20108","frame":{"x":2345,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20122","frame":{"x":2345,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20123","frame":{"x":2345,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20116","frame":{"x":2345,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20107","frame":{"x":0,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20109","frame":{"x":335,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20087","frame":{"x":670,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20085","frame":{"x":1005,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20089","frame":{"x":1340,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20086","frame":{"x":1675,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20088","frame":{"x":2010,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20080","frame":{"x":2345,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20081","frame":{"x":0,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20215","frame":{"x":335,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20214","frame":{"x":670,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20084","frame":{"x":1005,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20213","frame":{"x":1340,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20212","frame":{"x":1675,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20083","frame":{"x":2010,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20079","frame":{"x":2345,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20082","frame":{"x":2680,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20074","frame":{"x":2680,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20075","frame":{"x":2680,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20073","frame":{"x":2680,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20065","frame":{"x":2680,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20076","frame":{"x":2680,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20067","frame":{"x":2680,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20070","frame":{"x":2680,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20071","frame":{"x":2680,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20062","frame":{"x":2680,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20069","frame":{"x":2680,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20057","frame":{"x":2680,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20059","frame":{"x":2680,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20060","frame":{"x":2680,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20058","frame":{"x":2680,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20050","frame":{"x":0,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20051","frame":{"x":335,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20054","frame":{"x":670,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20053","frame":{"x":1005,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20066","frame":{"x":1340,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20047","frame":{"x":1675,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20048","frame":{"x":2010,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20046","frame":{"x":2345,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20044","frame":{"x":2680,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20056","frame":{"x":3015,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20041","frame":{"x":3015,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20064","frame":{"x":3015,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20040","frame":{"x":3015,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20055","frame":{"x":3015,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20049","frame":{"x":3015,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20045","frame":{"x":3015,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20037","frame":{"x":3015,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20078","frame":{"x":3015,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20077","frame":{"x":3015,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20061","frame":{"x":3015,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20043","frame":{"x":3015,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20063","frame":{"x":3015,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20030","frame":{"x":3015,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20039","frame":{"x":3015,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20035","frame":{"x":3015,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20029","frame":{"x":0,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20036","frame":{"x":335,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20024","frame":{"x":670,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20025","frame":{"x":1005,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20022","frame":{"x":1340,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20023","frame":{"x":1675,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20026","frame":{"x":2010,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20027","frame":{"x":2345,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20028","frame":{"x":2680,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20038","frame":{"x":3015,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20016","frame":{"x":0,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20033","frame":{"x":335,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20021","frame":{"x":670,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20034","frame":{"x":1005,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20018","frame":{"x":1340,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20032","frame":{"x":1675,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20031","frame":{"x":2010,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20052","frame":{"x":2345,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20020","frame":{"x":2680,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20019","frame":{"x":3015,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20145","frame":{"x":3350,"y":0,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20009","frame":{"x":3350,"y":201,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20010","frame":{"x":3350,"y":402,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20100","frame":{"x":3350,"y":603,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20099","frame":{"x":3350,"y":804,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20096","frame":{"x":3350,"y":1005,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20098","frame":{"x":3350,"y":1206,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20095","frame":{"x":3350,"y":1407,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20141","frame":{"x":3350,"y":1608,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20011","frame":{"x":3350,"y":1809,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20013","frame":{"x":3350,"y":2010,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20017","frame":{"x":3350,"y":2211,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20014","frame":{"x":3350,"y":2412,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20042","frame":{"x":3350,"y":2613,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20015","frame":{"x":3350,"y":2814,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20068","frame":{"x":3350,"y":3015,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20072","frame":{"x":3350,"y":3216,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20012","frame":{"x":3350,"y":3417,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20091","frame":{"x":0,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20001","frame":{"x":335,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20003","frame":{"x":670,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20006","frame":{"x":1005,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20002","frame":{"x":1340,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20004","frame":{"x":1675,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20007","frame":{"x":2010,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20008","frame":{"x":2345,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20005","frame":{"x":2680,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20090","frame":{"x":3015,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20094","frame":{"x":3350,"y":3618,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20093","frame":{"x":0,"y":3819,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20097","frame":{"x":335,"y":3819,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20092","frame":{"x":670,"y":3819,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20143","frame":{"x":1005,"y":3819,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20111","frame":{"x":1340,"y":3819,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}},{"filename":"Gorilla20149","frame":{"x":1675,"y":3819,"w":334,"h":200},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":334,"h":200},"sourceSize":{"w":334,"h":200}}],"meta":{"app":"https://www.leshylabs.com/apps/sstool/","version":"Leshy SpriteSheet Tool v0.8.4","image":"gorilla2.png","size":{"w":3684,"h":4019},"scale":1}}
+{
+    "frames": [
+        {
+            "filename": "Gorilla0211",
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0210",
+            "frame": {
+                "x": 0,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0209",
+            "frame": {
+                "x": 0,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0208",
+            "frame": {
+                "x": 335,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0207",
+            "frame": {
+                "x": 335,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0206",
+            "frame": {
+                "x": 335,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0205",
+            "frame": {
+                "x": 0,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0204",
+            "frame": {
+                "x": 335,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0203",
+            "frame": {
+                "x": 0,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0202",
+            "frame": {
+                "x": 335,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0201",
+            "frame": {
+                "x": 670,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0200",
+            "frame": {
+                "x": 670,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0199",
+            "frame": {
+                "x": 670,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0198",
+            "frame": {
+                "x": 670,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0197",
+            "frame": {
+                "x": 670,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0196",
+            "frame": {
+                "x": 0,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0195",
+            "frame": {
+                "x": 335,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0194",
+            "frame": {
+                "x": 670,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0193",
+            "frame": {
+                "x": 1005,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0192",
+            "frame": {
+                "x": 1005,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0191",
+            "frame": {
+                "x": 1005,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0190",
+            "frame": {
+                "x": 1005,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0189",
+            "frame": {
+                "x": 1005,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0188",
+            "frame": {
+                "x": 1005,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0187",
+            "frame": {
+                "x": 0,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0186",
+            "frame": {
+                "x": 335,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0185",
+            "frame": {
+                "x": 670,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0184",
+            "frame": {
+                "x": 1005,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0183",
+            "frame": {
+                "x": 0,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0182",
+            "frame": {
+                "x": 335,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0181",
+            "frame": {
+                "x": 670,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0180",
+            "frame": {
+                "x": 1005,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0179",
+            "frame": {
+                "x": 1340,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0178",
+            "frame": {
+                "x": 1340,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0177",
+            "frame": {
+                "x": 1340,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0176",
+            "frame": {
+                "x": 1340,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0175",
+            "frame": {
+                "x": 1340,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0174",
+            "frame": {
+                "x": 1340,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0173",
+            "frame": {
+                "x": 1340,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0172",
+            "frame": {
+                "x": 1340,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0171",
+            "frame": {
+                "x": 0,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0170",
+            "frame": {
+                "x": 335,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0169",
+            "frame": {
+                "x": 670,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0168",
+            "frame": {
+                "x": 1005,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0167",
+            "frame": {
+                "x": 1340,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0166",
+            "frame": {
+                "x": 0,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0165",
+            "frame": {
+                "x": 335,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0164",
+            "frame": {
+                "x": 670,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0163",
+            "frame": {
+                "x": 1005,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0162",
+            "frame": {
+                "x": 1340,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0161",
+            "frame": {
+                "x": 1675,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0160",
+            "frame": {
+                "x": 1675,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0159",
+            "frame": {
+                "x": 1675,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0155",
+            "frame": {
+                "x": 1675,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0154",
+            "frame": {
+                "x": 1675,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0153",
+            "frame": {
+                "x": 1675,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0152",
+            "frame": {
+                "x": 1675,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0150",
+            "frame": {
+                "x": 1675,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0146",
+            "frame": {
+                "x": 1675,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0133",
+            "frame": {
+                "x": 1675,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0134",
+            "frame": {
+                "x": 0,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0131",
+            "frame": {
+                "x": 335,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0151",
+            "frame": {
+                "x": 670,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0132",
+            "frame": {
+                "x": 1005,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0129",
+            "frame": {
+                "x": 1340,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0130",
+            "frame": {
+                "x": 1675,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0158",
+            "frame": {
+                "x": 2010,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0127",
+            "frame": {
+                "x": 2010,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0125",
+            "frame": {
+                "x": 2010,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0126",
+            "frame": {
+                "x": 2010,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0147",
+            "frame": {
+                "x": 2010,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0148",
+            "frame": {
+                "x": 2010,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0128",
+            "frame": {
+                "x": 2010,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0119",
+            "frame": {
+                "x": 2010,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0120",
+            "frame": {
+                "x": 2010,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0118",
+            "frame": {
+                "x": 2010,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0121",
+            "frame": {
+                "x": 2010,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0117",
+            "frame": {
+                "x": 0,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0157",
+            "frame": {
+                "x": 335,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0156",
+            "frame": {
+                "x": 670,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0144",
+            "frame": {
+                "x": 1005,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0137",
+            "frame": {
+                "x": 1340,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0136",
+            "frame": {
+                "x": 1675,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0138",
+            "frame": {
+                "x": 2010,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0114",
+            "frame": {
+                "x": 0,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0115",
+            "frame": {
+                "x": 335,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0142",
+            "frame": {
+                "x": 670,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0139",
+            "frame": {
+                "x": 1005,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0135",
+            "frame": {
+                "x": 1340,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0140",
+            "frame": {
+                "x": 1675,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0112",
+            "frame": {
+                "x": 2010,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0113",
+            "frame": {
+                "x": 2345,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0106",
+            "frame": {
+                "x": 2345,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0101",
+            "frame": {
+                "x": 2345,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0104",
+            "frame": {
+                "x": 2345,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0110",
+            "frame": {
+                "x": 2345,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0102",
+            "frame": {
+                "x": 2345,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0105",
+            "frame": {
+                "x": 2345,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0103",
+            "frame": {
+                "x": 2345,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0124",
+            "frame": {
+                "x": 2345,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0108",
+            "frame": {
+                "x": 2345,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0122",
+            "frame": {
+                "x": 2345,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0123",
+            "frame": {
+                "x": 2345,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0116",
+            "frame": {
+                "x": 2345,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0107",
+            "frame": {
+                "x": 0,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0109",
+            "frame": {
+                "x": 335,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0087",
+            "frame": {
+                "x": 670,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0085",
+            "frame": {
+                "x": 1005,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0089",
+            "frame": {
+                "x": 1340,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0086",
+            "frame": {
+                "x": 1675,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0088",
+            "frame": {
+                "x": 2010,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0080",
+            "frame": {
+                "x": 2345,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0081",
+            "frame": {
+                "x": 0,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0215",
+            "frame": {
+                "x": 335,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0214",
+            "frame": {
+                "x": 670,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0084",
+            "frame": {
+                "x": 1005,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0213",
+            "frame": {
+                "x": 1340,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0212",
+            "frame": {
+                "x": 1675,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0083",
+            "frame": {
+                "x": 2010,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0079",
+            "frame": {
+                "x": 2345,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0082",
+            "frame": {
+                "x": 2680,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0074",
+            "frame": {
+                "x": 2680,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0075",
+            "frame": {
+                "x": 2680,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0073",
+            "frame": {
+                "x": 2680,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0065",
+            "frame": {
+                "x": 2680,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0076",
+            "frame": {
+                "x": 2680,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0067",
+            "frame": {
+                "x": 2680,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0070",
+            "frame": {
+                "x": 2680,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0071",
+            "frame": {
+                "x": 2680,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0062",
+            "frame": {
+                "x": 2680,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0069",
+            "frame": {
+                "x": 2680,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0057",
+            "frame": {
+                "x": 2680,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0059",
+            "frame": {
+                "x": 2680,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0060",
+            "frame": {
+                "x": 2680,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0058",
+            "frame": {
+                "x": 2680,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0050",
+            "frame": {
+                "x": 0,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0051",
+            "frame": {
+                "x": 335,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0054",
+            "frame": {
+                "x": 670,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0053",
+            "frame": {
+                "x": 1005,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0066",
+            "frame": {
+                "x": 1340,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0047",
+            "frame": {
+                "x": 1675,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0048",
+            "frame": {
+                "x": 2010,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0046",
+            "frame": {
+                "x": 2345,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0044",
+            "frame": {
+                "x": 2680,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0056",
+            "frame": {
+                "x": 3015,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0041",
+            "frame": {
+                "x": 3015,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0064",
+            "frame": {
+                "x": 3015,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0040",
+            "frame": {
+                "x": 3015,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0055",
+            "frame": {
+                "x": 3015,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0049",
+            "frame": {
+                "x": 3015,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0045",
+            "frame": {
+                "x": 3015,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0037",
+            "frame": {
+                "x": 3015,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0078",
+            "frame": {
+                "x": 3015,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0077",
+            "frame": {
+                "x": 3015,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0061",
+            "frame": {
+                "x": 3015,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0043",
+            "frame": {
+                "x": 3015,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0063",
+            "frame": {
+                "x": 3015,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0030",
+            "frame": {
+                "x": 3015,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0039",
+            "frame": {
+                "x": 3015,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0035",
+            "frame": {
+                "x": 3015,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0029",
+            "frame": {
+                "x": 0,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0036",
+            "frame": {
+                "x": 335,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0024",
+            "frame": {
+                "x": 670,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0025",
+            "frame": {
+                "x": 1005,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0022",
+            "frame": {
+                "x": 1340,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0023",
+            "frame": {
+                "x": 1675,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0026",
+            "frame": {
+                "x": 2010,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0027",
+            "frame": {
+                "x": 2345,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0028",
+            "frame": {
+                "x": 2680,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0038",
+            "frame": {
+                "x": 3015,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0016",
+            "frame": {
+                "x": 0,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0033",
+            "frame": {
+                "x": 335,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0021",
+            "frame": {
+                "x": 670,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0034",
+            "frame": {
+                "x": 1005,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0018",
+            "frame": {
+                "x": 1340,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0032",
+            "frame": {
+                "x": 1675,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0031",
+            "frame": {
+                "x": 2010,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0052",
+            "frame": {
+                "x": 2345,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0020",
+            "frame": {
+                "x": 2680,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0019",
+            "frame": {
+                "x": 3015,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0145",
+            "frame": {
+                "x": 3350,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0009",
+            "frame": {
+                "x": 3350,
+                "y": 201,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0010",
+            "frame": {
+                "x": 3350,
+                "y": 402,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0100",
+            "frame": {
+                "x": 3350,
+                "y": 603,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0099",
+            "frame": {
+                "x": 3350,
+                "y": 804,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0096",
+            "frame": {
+                "x": 3350,
+                "y": 1005,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0098",
+            "frame": {
+                "x": 3350,
+                "y": 1206,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0095",
+            "frame": {
+                "x": 3350,
+                "y": 1407,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0141",
+            "frame": {
+                "x": 3350,
+                "y": 1608,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0011",
+            "frame": {
+                "x": 3350,
+                "y": 1809,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0013",
+            "frame": {
+                "x": 3350,
+                "y": 2010,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0017",
+            "frame": {
+                "x": 3350,
+                "y": 2211,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0014",
+            "frame": {
+                "x": 3350,
+                "y": 2412,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0042",
+            "frame": {
+                "x": 3350,
+                "y": 2613,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0015",
+            "frame": {
+                "x": 3350,
+                "y": 2814,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0068",
+            "frame": {
+                "x": 3350,
+                "y": 3015,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0072",
+            "frame": {
+                "x": 3350,
+                "y": 3216,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0012",
+            "frame": {
+                "x": 3350,
+                "y": 3417,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0091",
+            "frame": {
+                "x": 0,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0001",
+            "frame": {
+                "x": 335,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0003",
+            "frame": {
+                "x": 670,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0006",
+            "frame": {
+                "x": 1005,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0002",
+            "frame": {
+                "x": 1340,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0004",
+            "frame": {
+                "x": 1675,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0007",
+            "frame": {
+                "x": 2010,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0008",
+            "frame": {
+                "x": 2345,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0005",
+            "frame": {
+                "x": 2680,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0090",
+            "frame": {
+                "x": 3015,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0094",
+            "frame": {
+                "x": 3350,
+                "y": 3618,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0093",
+            "frame": {
+                "x": 0,
+                "y": 3819,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0097",
+            "frame": {
+                "x": 335,
+                "y": 3819,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0092",
+            "frame": {
+                "x": 670,
+                "y": 3819,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0143",
+            "frame": {
+                "x": 1005,
+                "y": 3819,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0111",
+            "frame": {
+                "x": 1340,
+                "y": 3819,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        },
+        {
+            "filename": "Gorilla0149",
+            "frame": {
+                "x": 1675,
+                "y": 3819,
+                "w": 334,
+                "h": 200
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 334,
+                "h": 200
+            },
+            "sourceSize": {
+                "w": 334,
+                "h": 200
+            }
+        }
+    ],
+    "meta": {
+        "app": "https://www.leshylabs.com/apps/sstool/",
+        "version": "Leshy SpriteSheet Tool v0.8.4",
+        "image": "Gorilla.png",
+        "size": {
+            "w": 3684,
+            "h": 4019
+        },
+        "scale": 1
+    }
+}
